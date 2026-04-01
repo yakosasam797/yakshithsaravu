@@ -1,0 +1,50 @@
+Yakshith                  
+yakshithsarav@gmail.com
++91 7975218181 | Portfolio | LinkedIn
+Product Designer (UX-Focused)
+Professional Summary
+Product Designer (2+ years) with experience owning end-to-end UX for B2C platforms, dashboards, and responsive web products. 
+Led user research, UX architecture, and UI execution for a mobile-first travel booking platform, working closely with founders and 
+developers.
+WORK EXPERIENCE
+Product Designer — Basecampmart (Wyshkit)
+Led end-to-end product design for a multi-sided gifting e-commerce platform, covering customer-facing marketplace, 
+vendor/partner portal, and admin operations system, with a strong focus on scalability, operations, and real-world feasibility.
+Wyshkit — Gifting Marketplace
+O wned UX and UI design across the entire Wyshkit ecosystem, including main e-commerce platform, partner (vendor) 
+center, and admin control panel.
+Contributed to early platform architecture decisions, balancing MVP constraints with long-term scalability .
+Conducted internal UX reviews and operational walkthroughs to validate designs against real e-commerce edge cases .
+Product Designer — WebSort (Globethrough)
+May 2025 - Present
+Apr 2024 - May 2025
+Led 10+ product designs across apps, dashboards, and websites—collaborating with developers and the founder, while 
+owning end-to-end design for Websort’s flagship travel platform, Globethrough.
+Globethrough 
+L ed UX from discovery to final UI across the full product ecosystem.
+Conducted user interviews and usability testing to identify booking friction and drop-o ffs.
+Designed and iterated a 4-step booking flow, achieving 85% task success rate.
+Defined information architecture and core user flows for search, booking, and checkout .
+Built reusable UI components to maintain consistency across platforms .
+Bengaluru Chauffeurs
+Redesigned a mobile-first website for a premium chau ffeur service to simplify booking and improve usability.
+Designed a streamlined 4-step booking experience to reduce user effort.
+Delivered a fully responsive design aligned with a premium brand perception .
+UI Designer & Front-End Developer Intern - Zephyr Technologies
+Aug 2023 - Sep 2023
+Worked on dashboards and data-heavy interfaces for sustainability products.
+EDUCATION  AND CERTIFICATIONS
+Google UX Design Professional Certificate
+User Research, UI/UX Research, Persona (User Experience), Responsive Web Design, Cross Platform Development
+SDM Institute of Technology — Bachelor of Computer Science and Engineering
+Web Development, Fullstack Development, Artificial intelligence, Machine Learning
+CORE SKILLS
+Product & UX
+Problem framing & UX strategy,  User flows & information architecture,  Usability testing & iteration,  Design systems & 
+component libraries,  Mobile-first & responsive design
+Interface & Visual Design  
+UI systems,  typography & layout,  SaaS & B2C product interfaces,  Visual hierarchy & consistency
+Tools
+Figma,  Adobe Photoshop,  Adobe Illustrator, Framer
+Collaboration
+Jira, Google Docs & Sheets, Slack

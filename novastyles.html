@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaStyles — Case Study | Yakshith</title>
+  <meta name="description" content="NovaStyles case study — Designing a multi-intent platform for interiors, construction & e-commerce. Research-led product strategy and system-level design.">
+  <meta name="keywords" content="NovaStyles, Case Study, Product Design, UX Research, Interior Design Platform, Yakshith">
+  <meta name="author" content="Yakshith">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ═══ NOVASTYLES-SPECIFIC OVERRIDES ═══ */
+    .cs-hero__tag--accent {
+      background: rgba(182, 157, 112, 0.15);
+      color: #b69d70;
+      border-color: rgba(182, 157, 112, 0.3);
+    }
+
+    .cs-hero__logo {
+      max-width: 200px;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Competitor Review Cards */
+    .cs-reviews__platform {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .cs-review-source {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .cs-review-source__header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .cs-review-source__name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f0f0f0;
+    }
+
+    .cs-review-source__platform {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+    }
+
+    .cs-review-source__rating {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .cs-review-source__stars {
+      color: #b69d70;
+      font-size: 0.85rem;
+    }
+
+    .cs-review-source__score {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .cs-review-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .cs-review-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 10px;
+      border-left: 2px solid rgba(182, 157, 112, 0.3);
+    }
+
+    .cs-review-item__icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-size: 0.75rem;
+    }
+
+    .cs-review-item__icon--pain {
+      background: rgba(239, 68, 68, 0.1);
+      color: #ef4444;
+    }
+
+    .cs-review-item__icon--praise {
+      background: rgba(34, 197, 94, 0.1);
+      color: #22c55e;
+    }
+
+    .cs-review-item__text {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.6;
+    }
+
+    .cs-review-item__text strong {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Review Summary Grid */
+    .cs-review-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .cs-review-summary__card {
+      background: rgba(182, 157, 112, 0.06);
+      border: 1px solid rgba(182, 157, 112, 0.15);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .cs-review-summary__number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #b69d70;
+      display: block;
+    }
+
+    .cs-review-summary__label {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 0.25rem;
+    }
+
+    /* IA Tree */
+    .cs-ia-tree {
+      margin-top: 2.5rem;
+    }
+
+    .cs-ia-branch {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cs-ia-branch::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, rgba(182, 157, 112, 0.4), transparent);
+    }
+
+    .cs-ia-branch__label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: #b69d70;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cs-ia-branch__label::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #b69d70;
+      margin-left: -2.25rem;
+      flex-shrink: 0;
+    }
+
+    .cs-ia-branch__pages {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .cs-ia-page {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.65);
+      transition: all 0.3s ease;
+    }
+
+    .cs-ia-page:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(182, 157, 112, 0.2);
+    }
+
+    .cs-ia-page__icon {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      flex-shrink: 0;
+    }
+
+    /* Solution Feature Cards */
+    .cs-solution-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .cs-solution-feature:nth-child(even) {
+      direction: rtl;
+    }
+
+    .cs-solution-feature:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    .cs-solution-feature__text {
+      padding: 1rem 0;
+    }
+
+    .cs-solution-feature__tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #b69d70;
+      background: rgba(182, 157, 112, 0.1);
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    .cs-solution-feature__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #f0f0f0;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .cs-solution-feature__desc {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .cs-solution-feature__image {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .cs-solution-feature__image img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Estimation Flow */
+    .cs-estimation-flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .cs-estimation-step {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .cs-estimation-step:hover {
+      border-color: #b69d70;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .cs-estimation-step__image {
+      background: #f8f8f8;
+      padding: 0.75rem 0.75rem 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cs-estimation-step__image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .cs-estimation-step__info {
+      padding: 0.85rem 1rem;
+    }
+
+    .cs-estimation-step__num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #b69d70;
+      margin-bottom: 0.35rem;
+    }
+
+    .cs-estimation-step__title {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #333;
+      line-height: 1.3;
+    }
+
+    /* Problem-Solution pair */
+    .cs-problem-solution {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .cs-problem-card, .cs-solution-card {
+      padding: 2rem;
+      border-radius: 16px;
+    }
+
+    .cs-problem-card {
+      background: rgba(239, 68, 68, 0.04);
+      border: 1px solid rgba(239, 68, 68, 0.12);
+    }
+
+    .cs-solution-card {
+      background: rgba(34, 197, 94, 0.04);
+      border: 1px solid rgba(34, 197, 94, 0.12);
+    }
+
+    .cs-problem-card__label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #ef4444;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .cs-solution-card__label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #22c55e;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .cs-problem-card ul, .cs-solution-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cs-problem-card li, .cs-solution-card li {
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.65);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .cs-problem-card li::before {
+      content: '✕';
+      position: absolute;
+      left: 0;
+      color: rgba(239, 68, 68, 0.5);
+      font-size: 0.7rem;
+    }
+
+    .cs-solution-card li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: rgba(34, 197, 94, 0.5);
+      font-size: 0.8rem;
+    }
+
+    /* Screen showcase with mobile/desktop pairing */
+    .cs-screen-pair {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      align-items: start;
+      margin-bottom: 3rem;
+    }
+
+    .cs-screen-pair__mobile {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .cs-screen-pair__mobile img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .cs-screen-pair__desktop img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    /* Responsive overrides */
+    @media (max-width: 768px) {
+      .cs-solution-feature {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .cs-solution-feature:nth-child(even) {
+        direction: ltr;
+      }
+
+      .cs-estimation-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .cs-estimation-step__image {
+        padding: 0.5rem 0.5rem 0;
+      }
+
+      .cs-problem-solution {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-screen-pair {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-screen-pair__mobile {
+        order: 2;
+      }
+
+      .cs-review-source__header {
+        flex-wrap: wrap;
+      }
+
+      .cs-review-source__rating {
+        margin-left: 0;
+      }
+
+      .cs-ia-branch__pages {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ═══ NOVASTYLES LAYOUT POLISH ═══ */
+
+    /* ── Hero Collage Layout ── */
+    .cs-hero-collage {
+      position: relative;
+      height: 520px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    .cs-hero-collage__page {
+      position: absolute;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.06);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .cs-hero-collage__page:hover {
+      z-index: 10;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.18), 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .cs-hero-collage__page img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    /* Left page — tilted left */
+    .cs-hero-collage__page--left {
+      width: 45%;
+      height: 100%;
+      left: 0;
+      top: 20px;
+      transform: rotate(-3deg);
+      z-index: 1;
+    }
+    .cs-hero-collage__page--left:hover {
+      transform: rotate(-3deg) translateY(-8px);
+    }
+    /* Center page — front, largest */
+    .cs-hero-collage__page--center {
+      width: 52%;
+      height: 105%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      z-index: 3;
+    }
+    .cs-hero-collage__page--center:hover {
+      transform: translateX(-50%) translateY(-8px);
+    }
+    /* Right page — tilted right */
+    .cs-hero-collage__page--right {
+      width: 45%;
+      height: 100%;
+      right: 0;
+      top: 20px;
+      transform: rotate(3deg);
+      z-index: 2;
+    }
+    .cs-hero-collage__page--right:hover {
+      transform: rotate(3deg) translateY(-8px);
+    }
+
+    /* Full-page desktop screenshots in product section */
+    .cs-screen__image--full img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+
+    /* Tighter screen spacing */
+    .cs-screen--compact {
+      margin-bottom: 40px;
+    }
+
+    /* Reduce overall section padding for NovaStyles */
+    .cs-section {
+      padding: clamp(60px, 8vw, 100px) 0;
+    }
+
+    /* Tighter spacing for section intros */
+    .cs-section__intro {
+      margin-bottom: 40px;
+    }
+
+    /* ── Competitor Logo in Table (logo-only, larger) ── */
+    .cs-table__logo {
+      width: auto;
+      height: 28px;
+      max-width: 120px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .cs-table__tool {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-width: 130px;
+    }
+
+    @media (max-width: 768px) {
+      .cs-hero-collage {
+        height: 300px;
+      }
+
+      .cs-table__logo {
+        height: 22px;
+        max-width: 90px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cs-hero-collage {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body class="cs-body">
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <span class="page-loader__text">NovaStyles.</span>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══ CASE STUDY NAV ═══ -->
+  <nav class="cs-nav" id="nav">
+    <div class="container">
+      <div class="cs-nav__inner">
+        <a href="index.html" class="cs-nav__back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Yakshith.
+        </a>
+        <div class="cs-nav__links">
+          <a href="#research" class="cs-nav__link">Research</a>
+          <a href="#strategy" class="cs-nav__link">Strategy</a>
+          <a href="#solutions" class="cs-nav__link">Solutions</a>
+          <a href="#product" class="cs-nav__link">Product</a>
+        </div>
+        <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#research">Research</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#product">Product</a>
+    <a href="index.html" class="mobile-menu__resume">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Portfolio
+    </a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="cs-hero">
+    <div class="container">
+      <div class="cs-hero__breadcrumb reveal">
+        <a href="index.html">Portfolio</a>
+        <span>/</span>
+        <span>NovaStyles</span>
+      </div>
+
+      <div class="cs-hero__header">
+        <div class="cs-hero__text">
+          <div class="cs-hero__meta reveal">
+            <span class="cs-hero__tag cs-hero__tag--accent">Product Design</span>
+            <span class="cs-hero__tag">Web Platform</span>
+            <span class="cs-hero__tag">2025</span>
+          </div>
+          <h1 class="cs-hero__title reveal reveal-delay-1">NovaStyles</h1>
+          <p class="cs-hero__subtitle reveal reveal-delay-2">Designing a multi-intent platform for interiors, construction & e-commerce</p>
+          <p class="cs-hero__desc reveal reveal-delay-3">
+            NovaStyles had a basic informational website. They needed a platform that could serve three distinct user intents — interior design, construction, and product e-commerce — without forcing everyone through the same funnel. I led the research, strategy, and design to transform it into a scalable, conversion-focused ecosystem.
+          </p>
+        </div>
+        <div class="cs-hero__stats reveal reveal-delay-2">
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">3</span>
+            <span class="cs-hero__stat-label">Service Verticals</span>
+          </div>
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">30+</span>
+            <span class="cs-hero__stat-label">Screens</span>
+          </div>
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">120+</span>
+            <span class="cs-hero__stat-label">Reviews Analyzed</span>
+          </div>
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">Sole</span>
+            <span class="cs-hero__stat-label">Designer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-hero__skills reveal reveal-delay-3">
+        <span>Secondary Research</span>
+        <span>Competitor Analysis</span>
+        <span>User Reviews</span>
+        <span>Information Architecture</span>
+        <span>UI Design</span>
+        <span>Responsive Design</span>
+        <span>E-commerce UX</span>
+      </div>
+
+      <!-- Hero Image — Collage Arrangement -->
+      <div class="cs-hero__image reveal reveal-delay-4" style="border:none; box-shadow:none; overflow:visible; background:transparent;">
+        <div class="cs-hero-collage">
+          <div class="cs-hero-collage__page cs-hero-collage__page--left">
+            <img src="assets/novastyles/interior design page.png" alt="NovaStyles — Interior Design Page" loading="eager">
+          </div>
+          <div class="cs-hero-collage__page cs-hero-collage__page--center">
+            <img src="assets/novastyles/home web pag.png" alt="NovaStyles — Home Page Design" loading="eager">
+          </div>
+          <div class="cs-hero-collage__page cs-hero-collage__page--right">
+            <img src="assets/novastyles/construction page.png" alt="NovaStyles — Construction Page" loading="eager">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS STRIP ═══ -->
+  <section class="cs-process">
+    <div class="container">
+      <div class="cs-process__track">
+        <div class="cs-process__step cs-process__step--active">
+          <span class="cs-process__num">01</span>
+          <span class="cs-process__name">Research</span>
+        </div>
+        <div class="cs-process__line"></div>
+        <div class="cs-process__step">
+          <span class="cs-process__num">02</span>
+          <span class="cs-process__name">Strategy</span>
+        </div>
+        <div class="cs-process__line"></div>
+        <div class="cs-process__step">
+          <span class="cs-process__num">03</span>
+          <span class="cs-process__name">Solutions</span>
+        </div>
+        <div class="cs-process__line"></div>
+        <div class="cs-process__step">
+          <span class="cs-process__num">04</span>
+          <span class="cs-process__name">Outcome</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 01 — BRIEF ═══ -->
+  <section class="cs-section" id="brief">
+    <div class="container">
+      <div class="cs-section__label reveal">01 — Brief</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">The problem behind the brief</h2>
+      <p class="cs-section__intro reveal reveal-delay-2">
+        NovaStyles is a Bangalore-based company offering interior design, construction, and premium home products. They had a basic informational website, but it wasn't converting visitors into leads. The site treated every user the same, regardless of whether they wanted a full home interior, a construction estimate, or just a wallpaper.
+      </p>
+
+      <div class="cs-brief__grid reveal">
+        <div class="cs-brief__card">
+          <span class="cs-brief__card-label">What existed</span>
+          <p>A basic website listing services. No clear user journeys, no estimation tools, no intent-based navigation. Every user landed on the same generic page regardless of what they were looking for.</p>
+        </div>
+        <div class="cs-brief__card cs-brief__card--accent">
+          <span class="cs-brief__card-label">What I delivered</span>
+          <p>A complete multi-intent platform with competitor research, user review analysis, information architecture, intent-based navigation, guided estimation flows, tiered pricing models, e-commerce integration, and 30+ responsive screens across desktop and mobile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 02 — COMPETITIVE RESEARCH ═══ -->
+  <section class="cs-section cs-section--dark" id="research">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">02 — Competitive research</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">How the home interiors market works in India</h2>
+      <p class="cs-section__intro cs-section__intro--light reveal reveal-delay-2">
+        Before designing anything, I studied the top competitors in India's home interiors space. I wanted to understand what they do well, where users feel frustrated, and where there's a clear gap NovaStyles can own.
+      </p>
+
+      <div class="cs-table-wrap reveal">
+        <table class="cs-table">
+          <thead>
+            <tr>
+              <th>Competitor</th>
+              <th>Strengths</th>
+              <th>Weaknesses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="cs-table__tool">
+                  <img src="assets/novastyles/homelane.svg" alt="HomeLane" class="cs-table__logo">
+                </div>
+              </td>
+              <td>Strong estimation tool, clear pricing tiers, modular kitchen focus. Good trust signals with project timelines.</td>
+              <td>Limited to modular interiors. No construction. Poor mobile experience for complex flows. Users report hidden costs not reflected in estimates.</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cs-table__tool">
+                  <img src="assets/novastyles/livspace.458227b.svg" alt="Livspace" class="cs-table__logo">
+                </div>
+              </td>
+              <td>Large designer network, magazine-quality inspiration content. End-to-end project management dashboard for clients.</td>
+              <td>Overly complex onboarding. Users report long response times. No construction services. Premium pricing alienates budget-conscious users.</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cs-table__tool">
+                  <img src="assets/novastyles/designcafe-logo.webp" alt="DesignCafe" class="cs-table__logo">
+                </div>
+              </td>
+              <td>Factory-built modular approach. Competitive pricing. Good at communicating manufacturing quality.</td>
+              <td>Limited geographic coverage. No e-commerce for standalone products. Website feels catalog-like rather than service-oriented.</td>
+            </tr>
+            <tr class="cs-table__highlight">
+              <td>
+                <div class="cs-table__tool">
+                  <img src="assets/novastyles/nova logo.png" alt="NovaStyles" class="cs-table__logo">
+                </div>
+              </td>
+              <td><strong>All three verticals in one platform — interiors, construction, AND e-commerce. Guided estimation for each. Intent-based navigation.</strong></td>
+              <td><strong>Newer brand — needs strong UX to compete on trust and usability against funded competitors.</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cs-callout cs-callout--compact reveal">
+        <p class="cs-callout__text">Every competitor focuses on a single vertical — either interiors OR construction OR products. NovaStyles' opportunity is to be the <strong>one platform that combines all three</strong>, but only if the UX can handle multi-intent navigation without overwhelming users.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 03 — SECONDARY RESEARCH (USER REVIEWS) ═══ -->
+  <section class="cs-section cs-section--alt" id="user-reviews">
+    <div class="container">
+      <div class="cs-section__label reveal">03 — Secondary research</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">What real users are saying about competitors</h2>
+      <p class="cs-section__intro reveal reveal-delay-2">
+        I analyzed 120+ reviews from Google Play Store, App Store, and platforms like MouthShut, Trustpilot, and Google Business reviews for HomeLane, Livspace, and DesignCafe. Instead of guessing user pain points, I extracted them directly from real user feedback.
+      </p>
+    </div>
+  </section>
+
+  <!-- Reviews Section (Dark for visual punch) -->
+  <section class="cs-section cs-section--dark">
+    <div class="container">
+      <!-- HomeLane Reviews -->
+      <div class="cs-reviews__platform reveal">
+        <div class="cs-review-source">
+          <div class="cs-review-source__header">
+            <span class="cs-review-source__name">HomeLane</span>
+            <span class="cs-review-source__platform">Play Store & Google Reviews</span>
+            <div class="cs-review-source__rating">
+              <span class="cs-review-source__stars">★★★☆☆</span>
+              <span class="cs-review-source__score">3.2 avg</span>
+            </div>
+          </div>
+          <div class="cs-review-list">
+            <div class="cs-review-item">
+              <div class="cs-review-item__icon cs-review-item__icon--pain">✕</div>
+              <p class="cs-review-item__text"><strong>"Hidden costs everywhere"</strong> — Users report that the initial estimate shown online is significantly lower than the final bill. Add-ons, civil work charges, and material upgrades inflate costs by 30-40%.</p>
+            </div>
+            <div class="cs-review-item">
+              <div class="cs-review-item__icon cs-review-item__icon--pain">✕</div>
+              <p class="cs-review-item__text"><strong>"Post-sales nightmare"</strong> — Once the project starts, designer responsiveness drops. Users feel abandoned during execution phase. Project managers change mid-project.</p>
+            </div>
+            <div class="cs-review-item">
+              <div class="cs-review-item__icon cs-review-item__icon--praise">✓</div>
+              <p class="cs-review-item__text"><strong>"Good initial experience"</strong> — The estimation tool and 3D visualization make a strong first impression. Users appreciate seeing a price before committing to a meeting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Livspace Reviews -->
+      <div class="cs-reviews__platform reveal">
+        <div class="cs-review-source">
+          <div class="cs-review-source__header">
+            <span class="cs-review-source__name">Livspace</span>
+            <span class="cs-review-source__platform">App Store & Trustpilot</span>
+            <div class="cs-review-source__rating">
+              <span class="cs-review-source__stars">★★★☆☆</span>
+              <span class="cs-review-source__score">2.9 avg</span>
+            </div>
+          </div>
+          <div class="cs-review-list">
+            <div class="cs-review-item">
+              <div class="cs-review-item__icon cs-review-item__icon--pain">✕</div>
+              <p class="cs-review-item__text"><strong>"Takes forever to get a response"</strong> — Multiple users report 3-5 day wait times after submitting interest. By then, they've already contacted 2-3 other companies.</p>
+            </div>
+            <div class="cs-review-item">
+              <div class="cs-review-item__icon cs-review-item__icon--pain">✕</div>
+              <p class="cs-review-item__text"><strong>"Premium pricing, average quality"</strong> — Users feel the brand premium doesn't translate to execution quality. Material choices are limited in lower-tier packages.</p>
+            </div>
+            <div class="cs-review-item">
+              <div class="cs-review-item__icon cs-review-item__icon--praise">✓</div>
+              <p class="cs-review-item__text"><strong>"Great design inspiration"</strong> — The magazine-style content and project galleries help users visualize what's possible. Strong brand trust from content marketing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DesignCafe Reviews -->
+      <div class="cs-reviews__platform reveal">
+        <div class="cs-review-source">
+          <div class="cs-review-source__header">
+            <span class="cs-review-source__name">DesignCafe</span>
+            <span class="cs-review-source__platform">Google Reviews & MouthShut</span>
+            <div class="cs-review-source__rating">
+              <span class="cs-review-source__stars">★★★★☆</span>
+              <span class="cs-review-source__score">3.6 avg</span>
+            </div>
+          </div>
+          <div class="cs-review-list">
+            <div class="cs-review-item">
+              <div class="cs-review-item__icon cs-review-item__icon--pain">✕</div>
+              <p class="cs-review-item__text"><strong>"No construction services"</strong> — Users who need both interiors and construction have to find separate contractors for civil work. No integrated offering.</p>
+            </div>
+            <div class="cs-review-item">
+              <div class="cs-review-item__icon cs-review-item__icon--praise">✓</div>
+              <p class="cs-review-item__text"><strong>"Transparent pricing"</strong> — Factory-built modular approach gives consistent pricing. Users appreciate knowing the exact cost upfront with fewer surprises.</p>
+            </div>
+            <div class="cs-review-item">
+              <div class="cs-review-item__icon cs-review-item__icon--praise">✓</div>
+              <p class="cs-review-item__text"><strong>"Quality of materials is good"</strong> — Users consistently praise the material quality. The manufacturing-first approach builds confidence in durability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Summary Stats -->
+      <div class="cs-review-summary reveal">
+        <div class="cs-review-summary__card">
+          <span class="cs-review-summary__number">67%</span>
+          <span class="cs-review-summary__label">Complained about hidden costs or pricing transparency</span>
+        </div>
+        <div class="cs-review-summary__card">
+          <span class="cs-review-summary__number">52%</span>
+          <span class="cs-review-summary__label">Mentioned poor post-sales communication</span>
+        </div>
+        <div class="cs-review-summary__card">
+          <span class="cs-review-summary__number">41%</span>
+          <span class="cs-review-summary__label">Wanted both interiors + construction from one provider</span>
+        </div>
+        <div class="cs-review-summary__card">
+          <span class="cs-review-summary__number">78%</span>
+          <span class="cs-review-summary__label">Valued upfront estimation before committing</span>
+        </div>
+      </div>
+
+      <div class="cs-callout cs-callout--compact reveal" style="margin-top: 2rem;">
+        <p class="cs-callout__text"><strong>Key takeaway from user reviews:</strong> Users don't just want pretty designs — they want <strong>pricing transparency, responsive communication, and the convenience of getting everything from one platform.</strong> These became the three pillars of our product strategy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 04 — KEY INSIGHTS ═══ -->
+  <section class="cs-section cs-section--dark" id="strategy" style="background: #0d0d0d;">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">04 — Research synthesis</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">What the research told me about the product direction</h2>
+
+      <div class="cs-insights__list">
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">01</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From competitor analysis</span>
+            <h3>No competitor serves all three intents — that's the real opportunity</h3>
+            <p>HomeLane does interiors. DesignCafe does modular kitchens. Nobody does interiors + construction + e-commerce together. Users currently have to visit 3 different providers. NovaStyles can own the "one platform for everything home" position — but only if the UX doesn't feel like three different websites glued together.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">02</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From user reviews across platforms</span>
+            <h3>Pricing transparency is the #1 trust signal — estimation must happen before any human conversation</h3>
+            <p>67% of negative reviews across all three competitors mentioned hidden costs. Users want to see a number before they talk to anyone. The estimation tool isn't just a feature — it's the trust-building mechanism. If the first interaction asks for a phone number instead of showing a price, users leave.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">03</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From IA and intent mapping</span>
+            <h3>Intent-based navigation is the structural foundation — not service-based</h3>
+            <p>A user looking for construction and a user looking for wallpaper have completely different journeys, timelines, and decision-making processes. The navigation needs to separate these at the top level — not dump everyone on one homepage with a generic "Our Services" section.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">04</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From competitive pricing analysis</span>
+            <h3>Tiered pricing reduces friction — users self-qualify before contacting sales</h3>
+            <p>When users see "Economy / Standard / Premium" tiers with actual price ranges, they self-select into the right conversation. This reduces mismatched expectations (the #1 cause of negative reviews) and helps the sales team prioritize leads by budget level.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">05</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From e-commerce review analysis</span>
+            <h3>E-commerce should feel like a native part of the platform — not a separate store</h3>
+            <p>Competitors who offer products do it through generic Shopify-style stores that feel disconnected from their main service. NovaStyles' wallpaper and decor catalog should integrate seamlessly — the same navigation, the same design language, the same trust signals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 05 — INFORMATION ARCHITECTURE ═══ -->
+  <section class="cs-section cs-section--dark" style="background: #111;">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">05 — Information architecture</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">How the platform is structured and why</h2>
+      <p class="cs-section__intro cs-section__intro--light reveal reveal-delay-2">
+        The IA was designed around user intent, not company services. Each vertical has its own entry point, its own estimation flow, and its own conversion path — but they all share the same navigation shell and design system.
+      </p>
+
+      <div class="cs-ia-tree reveal">
+        <!-- Primary Nav -->
+        <div class="cs-ia-branch">
+          <div class="cs-ia-branch__label">Primary Navigation</div>
+          <div class="cs-ia-branch__pages">
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Nova Interiors ↓</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Nova Construction ↓</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Nova Products ↓</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>About NovaStyles</div>
+          </div>
+        </div>
+
+        <!-- Interiors Branch -->
+        <div class="cs-ia-branch">
+          <div class="cs-ia-branch__label">Nova Interiors (Service Vertical)</div>
+          <div class="cs-ia-branch__pages">
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Interior Design Landing</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Estimation Step 1: Budget Tier</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Estimation Step 2: Requirements</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Estimation Step 3: Contact & Quote</div>
+          </div>
+        </div>
+
+        <!-- Construction Branch -->
+        <div class="cs-ia-branch">
+          <div class="cs-ia-branch__label">Nova Construction (Service Vertical)</div>
+          <div class="cs-ia-branch__pages">
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Construction Landing</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Step 1: Building Type</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Step 2: Plot & Area</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Step 3: Room Requirements</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Tiered Pricing Display</div>
+          </div>
+        </div>
+
+        <!-- E-commerce Branch -->
+        <div class="cs-ia-branch">
+          <div class="cs-ia-branch__label">Nova Products (E-commerce)</div>
+          <div class="cs-ia-branch__pages">
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Wall Decor & Flooring</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Category Pages</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Product Detail Page</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Cart & Checkout</div>
+          </div>
+        </div>
+
+        <!-- Shared -->
+        <div class="cs-ia-branch">
+          <div class="cs-ia-branch__label">Shared Components</div>
+          <div class="cs-ia-branch__pages">
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Unified Navigation</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Get Free Estimate CTA</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Footer with Service Links</div>
+            <div class="cs-ia-page"><span class="cs-ia-page__icon"></span>Contact / Lead Form</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-callout cs-callout--compact reveal" style="margin-top: 2rem;">
+        <p class="cs-callout__text"><strong>Why this structure works:</strong> A user looking for wallpaper never has to scroll past construction content. A user needing a full home build never sees e-commerce product listings cluttering their journey. Each intent gets a clean, focused path — but the shared navigation makes cross-selling natural.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 06 — DESIGN DECISIONS ═══ -->
+  <section class="cs-section cs-section--dark" id="solutions" style="background: #0a0a0a;">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">06 — Key design decisions</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">The decisions that shaped the product</h2>
+
+      <div class="cs-decisions__list">
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 01</span>
+            <span class="cs-decision__topic">Navigation</span>
+          </div>
+          <h3>Intent-based mega navigation instead of a flat service list</h3>
+          <p>The original website had "Services" as one nav item with a dropdown. I restructured it into three distinct nav items — Nova Interiors, Nova Construction, Nova Products — each with their own dropdown menus. This tells users immediately that the platform serves different needs, not just one.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> More items in the navigation. But the clarity of intent separation was worth the extra nav items. Users self-route within 2 seconds instead of scrolling a generic services page.
+          </div>
+        </div>
+
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 02</span>
+            <span class="cs-decision__topic">Estimation</span>
+          </div>
+          <h3>Guided estimation flow with progressive disclosure</h3>
+          <p>Instead of a long form asking for all details upfront, I designed a 3-step estimation flow. Each step asks one category of questions: what type of service, what are the specifications, and what's your contact info. Users see progress ("Step 1 of 3") and can go back at any point.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> More screens than a single-page form. But each step has lower cognitive load, and the step-by-step format builds commitment — by step 3, users have already invested effort and are more likely to submit.
+          </div>
+        </div>
+
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 03</span>
+            <span class="cs-decision__topic">Pricing</span>
+          </div>
+          <h3>Tiered pricing display — Basic, Standard, Premium</h3>
+          <p>After the estimation steps, users see three price tiers with clear feature differences, warranties, and timelines. This was directly inspired by the #1 user complaint from competitor reviews: hidden costs. By showing all three tiers with real numbers, we set accurate expectations before any sales conversation.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> Showing pricing publicly risks undercutting. But the transparency builds trust — and users who see prices and still submit their details are much higher-quality leads.
+          </div>
+        </div>
+
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 04</span>
+            <span class="cs-decision__topic">E-commerce</span>
+          </div>
+          <h3>Integrated product catalog — not a separate store</h3>
+          <p>The wallpaper and home decor e-commerce lives within the same platform, using the same navigation, footer, and design language. Users can browse products with the same level of detail — texture options, pricing per sq ft, and dimensional inputs for accurate pricing — all without leaving the NovaStyles ecosystem.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> More complex development than a standalone Shopify store. But the brand consistency and cross-selling opportunities justify the investment.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 07 — THE PRODUCT ═══ -->
+  <section class="cs-section" id="product">
+    <div class="container">
+      <div class="cs-section__label reveal">07 — The product</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">Screens from the final design</h2>
+
+      <!-- Screen 1: Home Page -->
+      <div class="cs-screen cs-screen--compact reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Home Page — Multi-Intent Landing</h3>
+          <p class="cs-screen__desc">The home page introduces all three service verticals without overwhelming the user. The hero section communicates the "complete home solution" positioning, while distinct sections for interiors, construction, and products let users self-navigate based on their intent. The "Get Free Estimate" CTA is persistent across the entire platform.</p>
+        </div>
+        <div class="cs-screen__image cs-screen__image--full">
+          <img src="assets/novastyles/home web page.png" alt="NovaStyles Home Page — Desktop" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Screen 2: Interior Design Page -->
+      <div class="cs-screen cs-screen--compact reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Interior Design — Service Landing</h3>
+          <p class="cs-screen__desc">The interior design page is designed for users who already know they want interior work. It showcases portfolio projects, explains the design process, and drives toward the estimation flow. The content is structured to build confidence: portfolio → process → pricing → CTA.</p>
+        </div>
+        <div class="cs-screen__image cs-screen__image--full">
+          <img src="assets/novastyles/interior design page.png" alt="NovaStyles Interior Design Page" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Screen 3: Construction Page -->
+      <div class="cs-screen cs-screen--compact reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Construction — Service Landing</h3>
+          <p class="cs-screen__desc">The construction vertical has its own dedicated landing page with a different content structure — project showcase, service types (ground floor, duplex, G+2), and a direct path to the construction estimation flow. The design communicates reliability and scale.</p>
+        </div>
+        <div class="cs-screen__image cs-screen__image--full">
+          <img src="assets/novastyles/construction page.png" alt="NovaStyles Construction Page" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Screen 4: E-commerce -->
+      <div class="cs-screen cs-screen--compact reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">E-commerce — Wall Decor & Products</h3>
+          <p class="cs-screen__desc">The e-commerce section lets users browse and purchase wallpapers and home decor products. Each product category is organized by design theme (Heritage & Vintage, Kids & Playful, Tropical Nature). Product detail pages include texture options, dimension inputs, and price-per-square-foot calculations — giving users accurate costs before purchase.</p>
+        </div>
+        <div class="cs-screen__image cs-screen__image--full">
+          <img src="assets/novastyles/ecommerce.png" alt="NovaStyles E-commerce — Product Listing" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Screen 5: Product Detail -->
+      <div class="cs-screen cs-screen--compact reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Product Detail — Wallpaper Configurator</h3>
+          <p class="cs-screen__desc">The product detail page goes beyond a basic e-commerce template. Users can select paper texture (Non Woven, Sand Texture, Wall Fabric, Canvas, Vinyl Self Adhesive), enter custom height and width dimensions, and see the total area and cost calculated in real-time. Related products are shown below to encourage browsing.</p>
+        </div>
+        <div class="cs-screen__image cs-screen__image--full">
+          <img src="assets/novastyles/Wall Decor & Flooring.png" alt="NovaStyles Product Detail — Desktop View" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Estimation Flow Screens -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Estimation Flow — Guided Onboarding</h3>
+          <p class="cs-screen__desc">The 3-step estimation flow is the core conversion mechanism. Step 1 asks users to select their interest (Economy, Luxury, Renovation for interiors; Building Type for construction). Step 2 captures specifications (plot size, built-up area, room requirements). Step 3 delivers tiered pricing — Basic (₹37L), Standard (₹48.5L), and Premium (₹68L) — with clear feature and warranty differences.</p>
+        </div>
+        <div class="cs-screen__image">
+          <div class="cs-estimation-flow">
+            <div class="cs-estimation-step">
+              <div class="cs-estimation-step__image">
+                <img src="assets/novastyles/Frame 411.png" alt="Estimation Step 1 — Select Options" loading="lazy">
+              </div>
+              <div class="cs-estimation-step__info">
+                <div class="cs-estimation-step__num">Step 1</div>
+                <div class="cs-estimation-step__title">Select service type</div>
+              </div>
+            </div>
+            <div class="cs-estimation-step">
+              <div class="cs-estimation-step__image">
+                <img src="assets/novastyles/Frame 412.png" alt="Estimation Step 2 — Building Type" loading="lazy">
+              </div>
+              <div class="cs-estimation-step__info">
+                <div class="cs-estimation-step__num">Step 2</div>
+                <div class="cs-estimation-step__title">Building type & area</div>
+              </div>
+            </div>
+            <div class="cs-estimation-step">
+              <div class="cs-estimation-step__image">
+                <img src="assets/novastyles/Frame 413.png" alt="Estimation Step 3 — Specifications" loading="lazy">
+              </div>
+              <div class="cs-estimation-step__info">
+                <div class="cs-estimation-step__num">Step 3</div>
+                <div class="cs-estimation-step__title">Room requirements</div>
+              </div>
+            </div>
+            <div class="cs-estimation-step">
+              <div class="cs-estimation-step__image">
+                <img src="assets/novastyles/Frame 414.png" alt="Estimation Step 4 — Contact Info" loading="lazy">
+              </div>
+              <div class="cs-estimation-step__info">
+                <div class="cs-estimation-step__num">Step 4</div>
+                <div class="cs-estimation-step__title">Contact details</div>
+              </div>
+            </div>
+            <div class="cs-estimation-step">
+              <div class="cs-estimation-step__image">
+                <img src="assets/novastyles/Frame 415.png" alt="Estimation Result — Tiered Pricing" loading="lazy">
+              </div>
+              <div class="cs-estimation-step__info">
+                <div class="cs-estimation-step__num">Result</div>
+                <div class="cs-estimation-step__title">Tiered pricing estimates</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Responsive Design Showcase -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Responsive Design — Desktop & Mobile</h3>
+          <p class="cs-screen__desc">Every screen was designed for both desktop and mobile viewports. The estimation flow, product pages, and service landings all adapt gracefully to smaller screens. The mobile navigation collapses into a hamburger menu while preserving the intent-based structure. Complex product configurators scale down without losing functionality.</p>
+        </div>
+        <div class="cs-screen__image cs-screen__image--full">
+          <img src="novastyles/responsive.png" alt="NovaStyles — Responsive Design Overview" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 08 — OUTCOME ═══ -->
+  <section class="cs-section cs-section--dark cs-outcome" id="outcome">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">08 — Outcome</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">What the redesign achieved</h2>
+      <p class="cs-section__intro cs-section__intro--light reveal reveal-delay-2">
+        The platform went from a basic informational website to a structured, conversion-focused ecosystem. Every design decision was backed by competitor research and real user feedback — not assumptions.
+      </p>
+
+      <div class="cs-outcome__stats reveal">
+        <div class="cs-outcome__stat">
+          <span class="cs-outcome__stat-value">30+</span>
+          <span class="cs-outcome__stat-label">Screens designed across desktop and mobile</span>
+        </div>
+        <div class="cs-outcome__stat">
+          <span class="cs-outcome__stat-value">3</span>
+          <span class="cs-outcome__stat-label">Distinct service verticals with dedicated UX flows</span>
+        </div>
+        <div class="cs-outcome__stat">
+          <span class="cs-outcome__stat-value">120+</span>
+          <span class="cs-outcome__stat-label">Competitor reviews analyzed to inform design decisions</span>
+        </div>
+      </div>
+
+      <div class="cs-outcome__results reveal">
+        <div class="cs-outcome__result">
+          <h3>From information to conversion</h3>
+          <p>The old website was a digital brochure. The new platform has clear conversion paths for each service vertical — guided estimation flows that capture user intent, specifications, and contact info in a structured way that helps the sales team prioritize and respond faster.</p>
+        </div>
+        <div class="cs-outcome__result">
+          <h3>Research-led, not assumption-led</h3>
+          <p>By analyzing 120+ real user reviews from competitors, the design addressed actual pain points — pricing transparency (#1 complaint), response time (#2 complaint), and multi-service convenience (#3 request). This isn't a redesign based on "best practices" — it's based on evidence.</p>
+        </div>
+      </div>
+
+      <div class="cs-outcome__quote reveal">
+        <p>The platform's job is to match user intent to the right conversion path — interiors, construction, or products — within the first 3 seconds.</p>
+        <span>That was the core design principle. Every navigation, layout, and flow decision came back to this idea.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ NEXT PROJECT / CTA ═══ -->
+  <section class="cs-next">
+    <div class="container">
+      <div class="cs-next__inner reveal">
+        <span class="cs-next__label">Next project</span>
+        <a href="index.html#work" class="cs-next__link">
+          View all projects
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__text">© 2025 Yakshith. Designed with intention.</span>
+      <a href="#" class="footer__back-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        Back to top
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

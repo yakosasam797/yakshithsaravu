@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Globethrough — Case Study | Yakshith</title>
+  <meta name="description"
+    content="Globethrough case study — A cleaner, faster way to book flights. End-to-end UX redesign of a flight booking app with research-led decisions.">
+  <meta name="keywords" content="Globethrough, Case Study, Product Design, Flight Booking, UX Design, Yakshith">
+  <meta name="author" content="Yakshith">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ═══ GLOBETHROUGH-SPECIFIC OVERRIDES ═══ */
+    .cs-hero__logo--gt {
+      max-width: 220px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .cs-hero__title--hidden {
+      display: none;
+    }
+
+    /* Globethrough brand color overrides */
+    .gt-accent {
+      color: #0B4D3C;
+    }
+
+    .cs-hero__tag--gt {
+      background: #0B4D3C;
+      color: #fff;
+    }
+
+    /* ═══ USER RESEARCH SURVEY — Custom Built Charts ═══ */
+    .gt-survey {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .gt-survey {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gt-survey__card {
+      background: #f5f5f5;
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: visible;
+    }
+
+    .gt-survey__card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .gt-survey__chart {
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      overflow: visible;
+    }
+
+    .gt-survey__chart svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+      overflow: visible;
+    }
+
+    .gt-survey__chart-bg {
+      fill: none;
+      stroke: #e0e0e0;
+      stroke-width: 4;
+    }
+
+    .gt-survey__chart-fill {
+      fill: none;
+      stroke-width: 4;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1.5s ease;
+    }
+
+    .gt-survey__chart-fill--yes {
+      stroke: #0B4D3C;
+    }
+
+    .gt-survey__chart-fill--no {
+      stroke: #F47C7C;
+    }
+
+    .gt-survey__pct {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0B4D3C;
+    }
+
+    .gt-survey__info {
+      flex: 1;
+    }
+
+    .gt-survey__question {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .gt-survey__legend {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .gt-survey__legend span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .gt-survey__legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .gt-survey__legend-dot--yes {
+      background: #0B4D3C;
+    }
+
+    .gt-survey__legend-dot--no {
+      background: #F47C7C;
+    }
+
+    /* ═══ MOBILE MOCKUP SHOWCASE ═══ */
+    .gt-mockup-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+      padding: 0 1rem;
+      overflow: visible;
+    }
+
+    @media (max-width: 768px) {
+      .gt-mockup-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    .gt-mockup {
+      text-align: center;
+    }
+
+    .gt-mockup img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 24px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gt-mockup img:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
+    }
+
+    .gt-mockup__label {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #666;
+      letter-spacing: 0.02em;
+    }
+
+    /* ═══ DUAL MOCKUP HERO IMAGE ═══ */
+    .gt-hero-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(11, 77, 60, 0.15);
+    }
+
+    .gt-hero-image img {
+      width: 100%;
+      display: block;
+    }
+
+    /* ═══ IA DIAGRAM ═══ */
+    .gt-ia-image {
+      margin-top: 2rem;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #e8f0ed;
+      padding: 2rem;
+    }
+
+    .gt-ia-image img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+    }
+
+    /* ═══ ADD-ONS FLOW ═══ */
+    .gt-addons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .gt-addons-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gt-addon-card {
+      background: #f8f8f8;
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .gt-addon-card img {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+    }
+
+    .gt-addon-card h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .gt-addon-card p {
+      font-size: 0.82rem;
+      color: #888;
+      margin-top: 0.3rem;
+    }
+
+    /* ═══ DESIGN SYSTEM SHOWCASE ═══ */
+    .gt-ds-image {
+      margin-top: 2rem;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #f5f5f5;
+      padding: 2rem;
+    }
+
+    .gt-ds-image img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+    }
+
+    /* ═══ BOOKING FLOW STEPS ═══ */
+    .gt-flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .gt-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .gt-flow {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gt-flow__step {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .gt-flow__step:hover {
+      transform: translateY(-4px);
+      border-color: #0B4D3C;
+    }
+
+    .gt-flow__step-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0B4D3C;
+      margin-bottom: 0.5rem;
+    }
+
+    .gt-flow__step-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    .gt-flow__step-desc {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+    }
+
+    /* ═══ SCREEN PAIR — Side by Side Mockups ═══ */
+    .gt-screen-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding: 0 1rem;
+      overflow: visible;
+    }
+
+    @media (max-width: 768px) {
+      .gt-screen-pair {
+        grid-template-columns: 1fr;
+        padding: 0;
+      }
+    }
+
+    .gt-screen-pair__item {
+      text-align: center;
+      overflow: visible;
+    }
+
+    .gt-screen-pair__item img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 24px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+    /* ═══ CONTRAST FIX — Insights on light backgrounds ═══ */
+    /* The shared .cs-insight styles assume dark bg. Override for light sections. */
+    .cs-section:not(.cs-section--dark) .cs-insight {
+      border-bottom: 1px solid var(--border-color);
+    }
+    .cs-section:not(.cs-section--dark) .cs-insight:first-child {
+      border-top: 1px solid var(--border-color);
+    }
+    .cs-section:not(.cs-section--dark) .cs-insight__num {
+      color: #0B4D3C;
+      opacity: 0.3;
+    }
+    .cs-section:not(.cs-section--dark) .cs-insight__source {
+      color: #0B4D3C;
+    }
+    .cs-section:not(.cs-section--dark) .cs-insight__content h3 {
+      color: var(--text-primary);
+    }
+    .cs-section:not(.cs-section--dark) .cs-insight__content p {
+      color: var(--text-secondary);
+    }
+
+    /* ═══ CONTRAST FIX — Decisions on dark backgrounds should stay accessible ═══ */
+    .cs-section--dark .cs-decision__tradeoff strong {
+      color: #0B4D3C;
+    }
+  </style>
+</head>
+
+<body class="cs-body">
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <span class="page-loader__text">Globethrough.</span>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══ CASE STUDY NAV ═══ -->
+  <nav class="cs-nav" id="nav">
+    <div class="container">
+      <div class="cs-nav__inner">
+        <a href="index.html" class="cs-nav__back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Yakshith.
+        </a>
+        <div class="cs-nav__links">
+          <a href="#research" class="cs-nav__link">Research</a>
+          <a href="#strategy" class="cs-nav__link">Strategy</a>
+          <a href="#solutions" class="cs-nav__link">Solutions</a>
+          <a href="#product" class="cs-nav__link">Product</a>
+        </div>
+        <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#research">Research</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#product">Product</a>
+    <a href="index.html" class="mobile-menu__resume">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>
+      Back to Portfolio
+    </a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="cs-hero">
+    <div class="container">
+      <div class="cs-hero__breadcrumb reveal">
+        <a href="index.html">Portfolio</a>
+        <span>/</span>
+        <span>Globethrough</span>
+      </div>
+
+      <div class="cs-hero__header">
+        <div class="cs-hero__text">
+          <div class="cs-hero__meta reveal">
+            <span class="cs-hero__tag cs-hero__tag--gt">Product Design</span>
+            <span class="cs-hero__tag">Mobile App</span>
+            <span class="cs-hero__tag">2024</span>
+          </div>
+          <img src="assets/globethrough/logo.png" alt="Globethrough Logo"
+            class="cs-hero__logo cs-hero__logo--gt reveal reveal-delay-1">
+          <h1 class="cs-hero__title cs-hero__title--hidden">Globethrough</h1>
+          <p class="cs-hero__subtitle reveal reveal-delay-2">A cleaner, faster way to book flights</p>
+          <p class="cs-hero__desc reveal reveal-delay-3">
+            The existing flight booking experience was cluttered, confusing, and full of hidden costs. I led the
+            end-to-end design — from user research and survey analysis to information architecture, component library,
+            and high-fidelity screens — creating a booking flow that users could trust and complete in under 2 minutes.
+          </p>
+        </div>
+        <div class="cs-hero__stats reveal reveal-delay-2">
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">85%</span>
+            <span class="cs-hero__stat-label">Task Success</span>
+          </div>
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">15+</span>
+            <span class="cs-hero__stat-label">Screens</span>
+          </div>
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">4</span>
+            <span class="cs-hero__stat-label">Step Booking</span>
+          </div>
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">Sole</span>
+            <span class="cs-hero__stat-label">Designer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-hero__skills reveal reveal-delay-3">
+        <span>User Research</span>
+        <span>Survey Design</span>
+        <span>Information Architecture</span>
+        <span>Booking Flow</span>
+        <span>Component Library</span>
+        <span>UI Design</span>
+        <span>Usability Testing</span>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="cs-hero__image reveal reveal-delay-4">
+        <div class="gt-hero-image">
+          <img src="assets/globethrough/hero-mockup.png" alt="Globethrough — Flight Booking App Mockups"
+            loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS STRIP ═══ -->
+  <section class="cs-process">
+    <div class="container">
+      <div class="cs-process__track">
+        <div class="cs-process__step cs-process__step--active">
+          <span class="cs-process__num">01</span>
+          <span class="cs-process__name">Research</span>
+        </div>
+        <div class="cs-process__line"></div>
+        <div class="cs-process__step">
+          <span class="cs-process__num">02</span>
+          <span class="cs-process__name">Strategy</span>
+        </div>
+        <div class="cs-process__line"></div>
+        <div class="cs-process__step">
+          <span class="cs-process__num">03</span>
+          <span class="cs-process__name">Solutions</span>
+        </div>
+        <div class="cs-process__line"></div>
+        <div class="cs-process__step">
+          <span class="cs-process__num">04</span>
+          <span class="cs-process__name">Outcome</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 01 — BRIEF ═══ -->
+  <section class="cs-section" id="brief">
+    <div class="container">
+      <div class="cs-section__label reveal">01 — Brief</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">What the project needed</h2>
+      <p class="cs-section__intro reveal reveal-delay-2">
+        Globethrough is a flight booking platform built for the Indian market. The existing app had a functional backend
+        but the user experience was fragmented — cluttered UI, confusing navigation, and a booking flow that made users
+        abandon mid-way. I was brought in to redesign the entire experience from the ground up.
+      </p>
+
+      <div class="cs-brief__grid reveal">
+        <div class="cs-brief__card">
+          <span class="cs-brief__card-label">The original ask</span>
+          <p>Redesign the flight booking app. Make it cleaner and easier to use than competitors like MakeMyTrip, Yatra,
+            and Ixigo.</p>
+        </div>
+        <div class="cs-brief__card cs-brief__card--accent">
+          <span class="cs-brief__card-label">What I delivered</span>
+          <p>User research with 100+ survey responses, information architecture, a modular component library, a
+            streamlined 4-step booking flow with 85% task success rate, and 15+ high-fidelity screens ready for
+            development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 02 — USER RESEARCH ═══ -->
+  <section class="cs-section cs-section--dark" id="research">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">02 — User research</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">What 100+ users told me about flight
+        booking</h2>
+      <p class="cs-section__intro cs-section__intro--light reveal reveal-delay-2">
+        Before designing anything, I conducted a survey with over 100 respondents to understand the real pain points of
+        booking flights in India. The results shaped every design decision that followed.
+      </p>
+
+      <!-- Custom-Built Survey Results -->
+      <div class="gt-survey reveal">
+        <!-- Card 1 -->
+        <div class="gt-survey__card">
+          <div class="gt-survey__chart">
+            <svg viewBox="0 0 36 36">
+              <circle class="gt-survey__chart-bg" cx="18" cy="18" r="15.915" />
+              <circle class="gt-survey__chart-fill gt-survey__chart-fill--yes" cx="18" cy="18" r="15.915"
+                stroke-dasharray="73 27" />
+            </svg>
+            <span class="gt-survey__pct">73%</span>
+          </div>
+          <div class="gt-survey__info">
+            <p class="gt-survey__question">I've experienced sudden price jumps or hidden charges at the last step of
+              booking.</p>
+            <div class="gt-survey__legend">
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--yes"></span>Yes 73%</span>
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--no"></span>No 27%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="gt-survey__card">
+          <div class="gt-survey__chart">
+            <svg viewBox="0 0 36 36">
+              <circle class="gt-survey__chart-bg" cx="18" cy="18" r="15.915" />
+              <circle class="gt-survey__chart-fill gt-survey__chart-fill--yes" cx="18" cy="18" r="15.915"
+                stroke-dasharray="74 26" />
+            </svg>
+            <span class="gt-survey__pct">74%</span>
+          </div>
+          <div class="gt-survey__info">
+            <p class="gt-survey__question">I get bombarded with fake alerts or unnecessary add-ons I don't want.</p>
+            <div class="gt-survey__legend">
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--yes"></span>Yes 74%</span>
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--no"></span>No 26%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="gt-survey__card">
+          <div class="gt-survey__chart">
+            <svg viewBox="0 0 36 36">
+              <circle class="gt-survey__chart-bg" cx="18" cy="18" r="15.915" />
+              <circle class="gt-survey__chart-fill gt-survey__chart-fill--yes" cx="18" cy="18" r="15.915"
+                stroke-dasharray="66 34" />
+            </svg>
+            <span class="gt-survey__pct">66%</span>
+          </div>
+          <div class="gt-survey__info">
+            <p class="gt-survey__question">I don't trust the final amount on screen — it keeps changing or doesn't
+              include all charges.</p>
+            <div class="gt-survey__legend">
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--yes"></span>Yes 66%</span>
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--no"></span>No 34%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="gt-survey__card">
+          <div class="gt-survey__chart">
+            <svg viewBox="0 0 36 36">
+              <circle class="gt-survey__chart-bg" cx="18" cy="18" r="15.915" />
+              <circle class="gt-survey__chart-fill gt-survey__chart-fill--yes" cx="18" cy="18" r="15.915"
+                stroke-dasharray="60 40" />
+            </svg>
+            <span class="gt-survey__pct">60%</span>
+          </div>
+          <div class="gt-survey__info">
+            <p class="gt-survey__question">I feel overwhelmed by messy flight apps full of too many tabs, banners, and
+              distractions.</p>
+            <div class="gt-survey__legend">
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--yes"></span>Yes 60%</span>
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--no"></span>No 40%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="gt-survey__card">
+          <div class="gt-survey__chart">
+            <svg viewBox="0 0 36 36">
+              <circle class="gt-survey__chart-bg" cx="18" cy="18" r="15.915" />
+              <circle class="gt-survey__chart-fill gt-survey__chart-fill--no" cx="18" cy="18" r="15.915"
+                stroke-dasharray="60 40" />
+            </svg>
+            <span class="gt-survey__pct" style="color: #F47C7C;">60%</span>
+          </div>
+          <div class="gt-survey__info">
+            <p class="gt-survey__question">Flight apps rarely help when something goes wrong — I'm left figuring it out
+              myself.</p>
+            <div class="gt-survey__legend">
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--no"></span>No 60%</span>
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--yes"></span>Yes 40%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="gt-survey__card">
+          <div class="gt-survey__chart">
+            <svg viewBox="0 0 36 36">
+              <circle class="gt-survey__chart-bg" cx="18" cy="18" r="15.915" />
+              <circle class="gt-survey__chart-fill gt-survey__chart-fill--no" cx="18" cy="18" r="15.915"
+                stroke-dasharray="69 31" />
+            </svg>
+            <span class="gt-survey__pct" style="color: #F47C7C;">69%</span>
+          </div>
+          <div class="gt-survey__info">
+            <p class="gt-survey__question">Booking a flight feels like a long process with too many steps and repeating
+              the same info.</p>
+            <div class="gt-survey__legend">
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--no"></span>No 69%</span>
+              <span><span class="gt-survey__legend-dot gt-survey__legend-dot--yes"></span>Yes 31%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key takeaway -->
+      <div class="cs-callout cs-callout--compact reveal" style="margin-top: 2.5rem;">
+        <p class="cs-callout__text"><strong>The research made one thing clear:</strong> Users don't want more features.
+          They want <strong>pricing they can trust, a clean interface without dark patterns, and a booking flow that
+            doesn't waste their time.</strong> These three pillars drove every design decision.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 03 — RESEARCH SYNTHESIS ═══ -->
+  <section class="cs-section" id="strategy">
+    <div class="container">
+      <div class="cs-section__label reveal">03 — Research synthesis</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">The insights that shaped the product direction</h2>
+
+      <div class="cs-insights__list">
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">01</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From survey data — 73% experienced hidden charges</span>
+            <h3>Price transparency is the #1 trust signal — show the real cost from the start</h3>
+            <p>Nearly 3 out of 4 users reported experiencing sudden price jumps at the last step. Competitors use this
+              as a dark pattern to lock users in. Globethrough's approach: show the complete price breakdown from the
+              search results page itself. No surprise charges at checkout. The price you see is the price you pay.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">02</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From survey data — 74% complained about fake alerts</span>
+            <h3>Remove every dark pattern — no fake urgency, no pre-selected add-ons</h3>
+            <p>Users are exhausted by "Only 2 seats left!" countdown timers and pre-checked insurance boxes.
+              Globethrough takes the opposite approach: no fake scarcity alerts, no pre-selected add-ons, no
+              manipulative UI. Add-ons like meals, seats, and baggage are presented clearly with a "Skip" option that's
+              just as prominent as the "Add" button.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">03</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From UI audit of competitors</span>
+            <h3>Clean visual hierarchy — one action per screen, not ten</h3>
+            <p>Competitor apps cram promotional banners, loyalty program upsells, and cross-sells onto every screen. The
+              user's primary task — finding and booking a flight — gets buried. Globethrough's design principle: every
+              screen has one primary action. Search. Compare. Select add-ons. Pay. Nothing else competes for attention.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">04</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From booking flow analysis</span>
+            <h3>A 4-step booking flow reduces cognitive load and prevents drop-offs</h3>
+            <p>Competitors require 6–8 steps to complete a booking, with redundant data entry and confusing
+              back-navigation. I designed Globethrough's flow in 4 steps: Search → Select flight → Choose add-ons
+              (seat/meal/baggage) → Review & Pay. Each step has clear progress indication and allows easy backtracking.
+              This achieved an 85% task success rate in usability testing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 04 — INFORMATION ARCHITECTURE ═══ -->
+  <section class="cs-section cs-section--dark" style="background: #111;">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">04 — Information architecture</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">How the app is structured and why
+      </h2>
+      <p class="cs-section__intro cs-section__intro--light reveal reveal-delay-2">
+        The IA was designed around user intent, not feature count. The bottom navigation has 5 core destinations — Home,
+        My Trips, Packages, Offers, and Account — each serving a distinct user need. The booking flow is intentionally
+        linear to prevent confusion.
+      </p>
+
+      <div class="gt-ia-image reveal">
+        <img src="assets/globethrough/ia-diagram.png" alt="Globethrough — Information Architecture Diagram"
+          loading="lazy">
+      </div>
+
+      <div class="cs-callout cs-callout--compact reveal" style="margin-top: 2rem;">
+        <p class="cs-callout__text"><strong>Why this structure works:</strong> The core booking flow (Search → Results →
+          Flight Details → Add-ons → Payment → Confirmation) is completely linear — no branching, no dead ends. This
+          reduced the average booking time and prevented the confusion caused by nested navigation in competitor apps.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 05 — THE BOOKING FLOW ═══ -->
+  <section class="cs-section cs-section--dark" id="solutions" style="background: #0a0a0a;">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">05 — The booking flow</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">4 steps from search to confirmation
+      </h2>
+      <p class="cs-section__intro cs-section__intro--light reveal reveal-delay-2">
+        Every competitor makes the booking flow feel long. I simplified it into 4 clearly defined steps. Each step has
+        one primary action — no distractions, no upsells cluttering the path.
+      </p>
+
+      <div class="gt-flow reveal">
+        <div class="gt-flow__step">
+          <div class="gt-flow__step-num">01</div>
+          <div class="gt-flow__step-title">Search</div>
+          <div class="gt-flow__step-desc">One-way or round-trip. Departure, destination, dates, travellers, class.
+            Special fare options for students, senior citizens, armed forces.</div>
+        </div>
+        <div class="gt-flow__step">
+          <div class="gt-flow__step-num">02</div>
+          <div class="gt-flow__step-title">Compare & Select</div>
+          <div class="gt-flow__step-desc">Filter by price, departure time, fastest, non-stop. Sort and compare across
+            airlines. Date-wise pricing strip for flexible travellers.</div>
+        </div>
+        <div class="gt-flow__step">
+          <div class="gt-flow__step-num">03</div>
+          <div class="gt-flow__step-title">Add-ons</div>
+          <div class="gt-flow__step-desc">Seat selection, meal preferences, baggage — each in its own tab. "Skip" is
+            always as prominent as "Add". Running total with View Breakup.</div>
+        </div>
+        <div class="gt-flow__step">
+          <div class="gt-flow__step-num">04</div>
+          <div class="gt-flow__step-title">Review & Pay</div>
+          <div class="gt-flow__step-desc">Complete price breakdown. No hidden fees. Free cancellation and instant refund
+            options clearly presented before payment.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 06 — KEY DESIGN DECISIONS ═══ -->
+  <section class="cs-section cs-section--dark" style="background: #0d0d0d;">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">06 — Key design decisions</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">The decisions that shaped the product
+      </h2>
+
+      <div class="cs-decisions__list">
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 01</span>
+            <span class="cs-decision__topic">Pricing</span>
+          </div>
+          <h3>Show the complete fare from the search results — no "convenience fees" at checkout</h3>
+          <p>Every price shown in the search results includes all taxes and fees. The "View Breakup" button on the
+            add-ons page shows exactly what each component costs. Users never see a different number at checkout than
+            what they expected. This directly addresses the #1 complaint from the survey (73% experienced hidden
+            charges).</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> Higher displayed prices in search results compared to competitors who show base
+            fares. But transparent pricing builds trust — and trust converts better than bait-and-switch tactics.
+          </div>
+        </div>
+
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 02</span>
+            <span class="cs-decision__topic">Add-ons</span>
+          </div>
+          <h3>Tabbed add-on selection with equal-weight Skip and Add buttons</h3>
+          <p>Seat, Meal, and Baggage are separated into tabs — not crammed onto one screen. Each tab has a clear "Skip"
+            button that's styled the same as the proceed button. Nothing is pre-selected. The running total at the
+            bottom always shows "View Breakup" so users know exactly what they're paying for.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> Lower add-on attach rates compared to dark-pattern competitors. But users who
+            choose to add extras do so intentionally — leading to fewer cancellations and refund requests.
+          </div>
+        </div>
+
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 03</span>
+            <span class="cs-decision__topic">Search Results</span>
+          </div>
+          <h3>Date-wise pricing strip + smart filters above fold</h3>
+          <p>A horizontal scrollable strip shows prices across dates, so flexible travellers can spot the cheapest
+            option instantly. Below that, filter chips (Low-High, Departure, Fastest, Non-stop) are visible without
+            opening a modal. This reduces the number of interactions needed to find the right flight from 5+ to 2.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> More vertical space used above the fold. But users make decisions faster when
+            comparison data is immediately visible, not hidden behind filter menus.
+          </div>
+        </div>
+
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 04</span>
+            <span class="cs-decision__topic">Visual Design</span>
+          </div>
+          <h3>Clean white interface with deep teal accents — no visual noise</h3>
+          <p>Competitors use vibrant gradients, promotional banners, and animated badges everywhere. Globethrough uses a
+            clean white background with deep teal (#0B4D3C) as the only accent color. The result: the user's eye goes
+            directly to flight information instead of being pulled toward ads and promotions. Typography uses the
+            Satoshi font family for a modern, readable feel.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> Less visual "excitement" compared to competitors. But the calm interface reduces
+            cognitive load during a task that involves comparing numbers and making financial decisions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 07 — THE PRODUCT ═══ -->
+  <section class="cs-section" id="product">
+    <div class="container">
+      <div class="cs-section__label reveal">07 — The product</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">Screens from the final design</h2>
+
+      <!-- Screen 1: Splash + Home -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Splash Screen & Home — First Impressions</h3>
+          <p class="cs-screen__desc">The splash screen features the Globethrough logo centered over a subtle world map —
+            clean and confident. The home screen leads with "Book Flight Ticket Now" and a one-way/round-trip toggle.
+            Every input field (dates, airports, travellers, class) is immediately visible — no progressive disclosure
+            for the primary task.</p>
+        </div>
+        <div class="cs-screen__image" style="overflow: visible;">
+          <div class="gt-screen-pair">
+            <div class="gt-screen-pair__item">
+              <img src="assets/globethrough/screen-splash.png" alt="Globethrough Splash Screen" loading="lazy">
+            </div>
+            <div class="gt-screen-pair__item">
+              <img src="assets/globethrough/screen-home.png" alt="Globethrough Home — Book Flight" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 2: Search Loading -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Flight Search — Loading State</h3>
+          <p class="cs-screen__desc">Instead of a blank screen or generic spinner, the loading state shows a branded
+            airplane illustration with "Searching for the Flights..." and reassuring copy: "Sit back and relax as we
+            scan for the perfect flights just for you." This micro-interaction maintains engagement during what would
+            otherwise be a frustrating wait.</p>
+        </div>
+        <div class="cs-screen__image">
+          <div style="text-align: center;">
+            <img src="assets/globethrough/screen-loading.png" alt="Globethrough Flight Search Loading" loading="lazy"
+              style="max-width: 340px; border-radius: 24px; box-shadow: 0 16px 48px rgba(0,0,0,0.12);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 3: Search Results -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Search Results — Compare & Select</h3>
+          <p class="cs-screen__desc">The results page puts comparison data first. The top bar shows route details and
+            traveller info. A date-wise pricing strip lets users spot cheaper dates at a glance. Filter chips (Low-High,
+            Departure, Fastest, Non Stop) are always visible. Each flight card shows airline, times, duration, stops,
+            and the complete fare — all in one scannable row.</p>
+        </div>
+        <div class="cs-screen__image">
+          <div class="gt-screen-pair">
+            <div class="gt-screen-pair__item">
+              <img src="assets/globethrough/screen-search.png" alt="Globethrough Search Results — List View"
+                loading="lazy">
+            </div>
+            <div class="gt-screen-pair__item">
+              <img src="assets/globethrough/screen-flights.png" alt="Globethrough Search Results — Grid View"
+                loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 4: Add-ons -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Add-ons — Seat, Meal, Baggage</h3>
+          <p class="cs-screen__desc">The add-on selection uses a tabbed interface — Seat, Meal, and Baggage each get
+            their own focused view. The seat map shows available seats with color-coded pricing. The meal selection
+            shows food images with veg/non-veg indicators. Baggage options show weight and price clearly. Every tab has
+            a "Skip" button that's just as styled as the proceed button — no dark patterns.</p>
+        </div>
+        <div class="cs-screen__image" style="overflow: visible;">
+          <div class="gt-mockup-row">
+            <div class="gt-mockup">
+              <img src="assets/globethrough/screen-seat.png" alt="Seat Selection" loading="lazy">
+              <div class="gt-mockup__label">Seat Selection</div>
+            </div>
+            <div class="gt-mockup">
+              <img src="assets/globethrough/screen-meal.png" alt="Meal Selection" loading="lazy">
+              <div class="gt-mockup__label">Meal Preferences</div>
+            </div>
+            <div class="gt-mockup">
+              <img src="assets/globethrough/screen-baggage.png" alt="Baggage Add-on" loading="lazy">
+              <div class="gt-mockup__label">Baggage Options</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 5: Dual Mockup -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Complete Device Mockups</h3>
+          <p class="cs-screen__desc">The final designs work across all screen sizes. The booking form on the home screen
+            and the search results page — the two most critical screens — are shown here in device frames to demonstrate
+            how the clean layout translates to real-world usage. The deep teal accent creates a calm, trustworthy
+            atmosphere that differentiates Globethrough from the visual chaos of competitor apps.</p>
+        </div>
+        <div class="cs-screen__image">
+          <div class="gt-hero-image">
+            <img src="assets/globethrough/screen-dual.png" alt="Globethrough — Complete Device Mockups" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 6: Design System -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Design System — Component Library</h3>
+          <p class="cs-screen__desc">A unified component library ensures consistency across every screen. The system
+            includes button variants (primary filled, secondary outlined), typography scale (Satoshi font family at
+            18/16/14px with defined weights), bottom navigation states, input fields with date pickers, search bars, and
+            flight cards. Every component is documented with spacing and sizing specs for developer handoff.</p>
+        </div>
+        <div class="cs-screen__image">
+          <div class="gt-ds-image">
+            <img src="assets/globethrough/design-system.png" alt="Globethrough — Design System Components"
+              loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 08 — OUTCOME ═══ -->
+  <section class="cs-section cs-section--dark cs-outcome" id="outcome">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">08 — Outcome</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">What the redesign achieved</h2>
+      <p class="cs-section__intro cs-section__intro--light reveal reveal-delay-2">
+        The redesign transformed a cluttered, confusing booking experience into a clean, trustworthy flow. Every design
+        decision was backed by real user data — not assumptions or industry trends.
+      </p>
+
+      <div class="cs-outcome__stats reveal">
+        <div class="cs-outcome__stat">
+          <span class="cs-outcome__stat-value">85%</span>
+          <span class="cs-outcome__stat-label">Task success rate in usability testing — up from ~50% on the previous
+            design</span>
+        </div>
+        <div class="cs-outcome__stat">
+          <span class="cs-outcome__stat-value">15+</span>
+          <span class="cs-outcome__stat-label">High-fidelity screens designed and ready for developer handoff</span>
+        </div>
+        <div class="cs-outcome__stat">
+          <span class="cs-outcome__stat-value">4</span>
+          <span class="cs-outcome__stat-label">Step booking flow — reduced from 6–8 steps in the original design</span>
+        </div>
+      </div>
+
+      <div class="cs-outcome__results reveal">
+        <div class="cs-outcome__result">
+          <h3>From cluttered to clean</h3>
+          <p>The original app tried to do everything on every screen — promotions, loyalty programs, cross-sells. The
+            redesign gives each screen one job. Users can now search, compare, and book a flight without being
+            distracted by content that doesn't serve their immediate task.</p>
+        </div>
+        <div class="cs-outcome__result">
+          <h3>Research-led, not trend-led</h3>
+          <p>Every decision — from the transparent pricing to the un-dark-patterned add-ons to the 4-step flow — came
+            directly from what 100+ real users told us about their frustrations with existing flight booking apps. This
+            isn't a redesign based on "what looks good" — it's based on what users actually need.</p>
+        </div>
+      </div>
+
+      <div class="cs-outcome__quote reveal">
+        <p>The app's job is to get you from "I need a flight" to "Booked" — cleanly, honestly, and fast.</p>
+        <span>That was the core design principle. Every screen, every interaction, every design decision came back to
+          this idea. No dark patterns. No hidden fees. Just a booking experience you can trust.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ NEXT PROJECT / CTA ═══ -->
+  <section class="cs-next">
+    <div class="container">
+      <div class="cs-next__inner reveal">
+        <span class="cs-next__label">Next project</span>
+        <a href="novastyles.html" class="cs-next__link">
+          NovaStyles — Interior Design Platform
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__text">© 2025 Yakshith. Designed with intention.</span>
+      <a href="#" class="footer__back-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        Back to top
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

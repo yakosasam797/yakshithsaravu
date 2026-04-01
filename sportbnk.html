@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportbnk — Case Study | Yakshith</title>
+  <meta name="description" content="Sportbnk case study — AI-powered sports sponsorship intelligence platform. 0→1 MVP designed in 6 days with research-led product decisions.">
+  <meta name="keywords" content="Sportbnk, Case Study, Product Design, MVP, UX Design, Yakshith">
+  <meta name="author" content="Yakshith">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cs-body">
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <span class="page-loader__text">Sportbnk.</span>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══ CASE STUDY NAV ═══ -->
+  <nav class="cs-nav" id="nav">
+    <div class="container">
+      <div class="cs-nav__inner">
+        <a href="index.html" class="cs-nav__back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Yakshith.
+        </a>
+        <div class="cs-nav__links">
+          <a href="#research" class="cs-nav__link">Research</a>
+          <a href="#insights" class="cs-nav__link">Insights</a>
+          <a href="#decisions" class="cs-nav__link">Decisions</a>
+          <a href="#product" class="cs-nav__link">Product</a>
+        </div>
+        <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#research">Research</a>
+    <a href="#insights">Insights</a>
+    <a href="#decisions">Decisions</a>
+    <a href="#product">Product</a>
+    <a href="index.html" class="mobile-menu__resume">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Portfolio
+    </a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="cs-hero">
+    <div class="container">
+      <div class="cs-hero__breadcrumb reveal">
+        <a href="index.html">Portfolio</a>
+        <span>/</span>
+        <span>Sportbnk</span>
+      </div>
+
+      <div class="cs-hero__header">
+        <div class="cs-hero__text">
+          <div class="cs-hero__meta reveal">
+            <span class="cs-hero__tag cs-hero__tag--accent">Product Design</span>
+            <span class="cs-hero__tag">MVP</span>
+            <span class="cs-hero__tag">2025</span>
+          </div>
+          <img src="assets/sportbnk/logo.png" alt="Sportbnk Logo" class="cs-hero__logo cs-hero__logo--large reveal reveal-delay-1">
+          <h1 class="sr-only">Sportbnk — AI-powered sports sponsorship intelligence platform</h1>
+          <p class="cs-hero__subtitle reveal reveal-delay-2">AI-powered sports sponsorship intelligence platform</p>
+          <p class="cs-hero__desc reveal reveal-delay-3">
+            The founder needed an MVP designed from scratch. I worked alongside one other designer to build this from zero. Before touching Figma I spent time understanding the business, how the market works, and what users actually needed. That research changed the direction of the product.
+          </p>
+
+          <!-- Founder credibility -->
+          <div class="cs-hero__founder reveal reveal-delay-3">
+            <img src="assets/sportbnk/founder.png" alt="Jared Wilson — Founder" class="cs-hero__founder-photo">
+            <div class="cs-hero__founder-info">
+              <span class="cs-hero__founder-name">Jared Wilson</span>
+              <span class="cs-hero__founder-role">Founder @ Sportbnk</span>
+              <span class="cs-hero__founder-location">Ireland · 8,300+ followers</span>
+            </div>
+          </div>
+        </div>
+        <div class="cs-hero__stats reveal reveal-delay-2">
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">6d</span>
+            <span class="cs-hero__stat-label">0 → 1 MVP</span>
+          </div>
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">25+</span>
+            <span class="cs-hero__stat-label">Screens</span>
+          </div>
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">3</span>
+            <span class="cs-hero__stat-label">User Flows</span>
+          </div>
+          <div class="cs-hero__stat">
+            <span class="cs-hero__stat-value">2</span>
+            <span class="cs-hero__stat-label">Designers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-hero__skills reveal reveal-delay-3">
+        <span>Competitive Research</span>
+        <span>User Research</span>
+        <span>Business Model</span>
+        <span>MVP Scoping</span>
+        <span>IA</span>
+        <span>UI Design</span>
+        <span>Design System</span>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="cs-hero__image reveal reveal-delay-4">
+        <img src="assets/sportbnk/dashboard.png" alt="Sportbnk Dashboard — Command Center" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS STRIP ═══ -->
+  <section class="cs-process">
+    <div class="container">
+      <div class="cs-process__track">
+        <div class="cs-process__step cs-process__step--active">
+          <span class="cs-process__num">01</span>
+          <span class="cs-process__name">Research</span>
+        </div>
+        <div class="cs-process__line"></div>
+        <div class="cs-process__step">
+          <span class="cs-process__num">02</span>
+          <span class="cs-process__name">Insights</span>
+        </div>
+        <div class="cs-process__line"></div>
+        <div class="cs-process__step">
+          <span class="cs-process__num">03</span>
+          <span class="cs-process__name">Decisions</span>
+        </div>
+        <div class="cs-process__line"></div>
+        <div class="cs-process__step">
+          <span class="cs-process__num">04</span>
+          <span class="cs-process__name">Outcome</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 01 — BRIEF ═══ -->
+  <section class="cs-section" id="brief">
+    <div class="container">
+      <div class="cs-section__label reveal">01 — Brief</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">What I was asked to do</h2>
+      <p class="cs-section__intro reveal reveal-delay-2">
+        The ask was to redesign existing MVP screens and make them production-ready. I pushed back on starting in Figma straight away. I wanted to understand the business and the users first — otherwise I would just be making things look better without knowing if the structure was right.
+      </p>
+
+      <div class="cs-brief__grid reveal">
+        <div class="cs-brief__card">
+          <span class="cs-brief__card-label">The original ask</span>
+          <p>Redesign the existing screens. Make it look production-ready for investors.</p>
+        </div>
+        <div class="cs-brief__card cs-brief__card--accent">
+          <span class="cs-brief__card-label">What I delivered</span>
+          <p>Competitor research, user interviews, business model analysis, MVP scoping, IA decisions, design system, 25+ screens, and a written direction document. I extended the scope because the work needed it. The founder agreed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 02 — MARKET UNDERSTANDING ═══ -->
+  <section class="cs-section cs-section--dark" id="research">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">02 — Understanding the market</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">How the sports sponsorship market actually works</h2>
+      <p class="cs-section__intro cs-section__intro--light reveal reveal-delay-2">
+        Before talking to users I read about how sponsorship deals happen — the stages, the timelines, who has what leverage. This helped me ask better questions and understand the problem more clearly.
+      </p>
+
+      <div class="cs-market__grid">
+        <div class="cs-market__card reveal">
+          <div class="cs-market__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>The deal process</h3>
+          <p>From first awareness to a signed contract takes 6 to 18 months. Most of that time is spent just finding the right partner and the right person to contact. That is the problem Sportbnk is solving.</p>
+        </div>
+        <div class="cs-market__card reveal reveal-delay-1">
+          <div class="cs-market__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Why agencies exist</h3>
+          <p>Agencies charge 15–20% of deal value. Most of that fee is essentially for knowing who is in market right now, and who to call. That knowledge gap is what Sportbnk is replacing.</p>
+        </div>
+        <div class="cs-market__card reveal reveal-delay-2">
+          <div class="cs-market__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Where the revenue model fits</h3>
+          <p>The most valuable moment for the user is when they want to contact a specific person. That is the right place to charge a credit. Everything before that should be free to build trust and get users invested.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 03 — USER RESEARCH ═══ -->
+  <section class="cs-section" id="user-research">
+    <div class="container">
+      <div class="cs-section__label reveal">03 — User research</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">What I heard from users before designing anything</h2>
+      <p class="cs-section__intro reveal reveal-delay-2">
+        I spoke with people from all three user types. I was not validating assumptions — I was trying to understand what their day actually looks like and where things break down.
+      </p>
+
+      <div class="cs-quotes__grid">
+        <div class="cs-quote reveal">
+          <div class="cs-quote__mark">"</div>
+          <blockquote class="cs-quote__text">We spend the first three months just figuring out which clubs are even open to a conversation. By the time we find the right one, our budget cycle has moved.</blockquote>
+          <div class="cs-quote__author">
+            <span class="cs-quote__role">Brand Marketing Manager</span>
+            <span class="cs-quote__insight">They need to know who is open before they start.</span>
+          </div>
+        </div>
+
+        <div class="cs-quote reveal reveal-delay-1">
+          <div class="cs-quote__mark">"</div>
+          <blockquote class="cs-quote__text">We have 200 brands in a spreadsheet. We don't know who's actively looking, who just moved budget, or who signed with someone else last week.</blockquote>
+          <div class="cs-quote__author">
+            <span class="cs-quote__role">Commercial Director — Cricket Club</span>
+            <span class="cs-quote__insight">They need to know which brands are ready.</span>
+          </div>
+        </div>
+
+        <div class="cs-quote reveal reveal-delay-2">
+          <div class="cs-quote__mark">"</div>
+          <blockquote class="cs-quote__text">I manage 12 clients across 12 different spreadsheets. I spend more time managing information than actually working on deals.</blockquote>
+          <div class="cs-quote__author">
+            <span class="cs-quote__role">Agency Partnerships Lead</span>
+            <span class="cs-quote__insight">They need one place for everything.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Common thread -->
+      <div class="cs-callout reveal">
+        <div class="cs-callout__label">What all three had in common</div>
+        <p class="cs-callout__text">None of them said they needed more data. They already had data. What they all said in different ways was: <strong>I need to know what to act on right now.</strong> That became the core product idea — not a database, but a tool that surfaces the right opportunity at the right time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 04 — COMPETITIVE RESEARCH ═══ -->
+  <section class="cs-section cs-section--alt">
+    <div class="container">
+      <div class="cs-section__label reveal">04 — Competitive research</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">What existing tools are doing and what they're missing</h2>
+      <p class="cs-section__intro reveal reveal-delay-2">
+        I looked at four tools in this space. Each one is useful but each one solves only part of the problem. Looking at all four together made it clear where the gap was.
+      </p>
+
+      <div class="cs-table-wrap reveal">
+        <table class="cs-table">
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>What it does</th>
+              <th>What it doesn't do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="cs-table__tool cs-table__tool--logo-only">
+                  <img src="assets/sportbnk/sponsor-united.png" alt="SponsorUnited" class="cs-table__logo cs-table__logo--large">
+                </div>
+              </td>
+              <td>Tracks sponsorship deals and has a large database of clubs and brands</td>
+              <td>No signals, no CRM, mostly US-focused, only shows historical data</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cs-table__tool cs-table__tool--logo-only">
+                  <img src="assets/sportbnk/relo-metrics.png" alt="Relo Metrics" class="cs-table__logo cs-table__logo--large">
+                </div>
+              </td>
+              <td>Measures ROI on deals that have already happened</td>
+              <td>Only works after a deal is signed — no value before the deal</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cs-table__tool cs-table__tool--logo-only">
+                  <img src="assets/sportbnk/kore.png" alt="KORE Software" class="cs-table__logo cs-table__logo--large">
+                </div>
+              </td>
+              <td>CRM for clubs and leagues to manage their sponsor relationships</td>
+              <td>Built only for rights holders — brands and agencies cannot use it</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cs-table__tool cs-table__tool--logo-only">
+                  <img src="assets/sportbnk/opensponsorship.png" alt="OpenSponsorship" class="cs-table__logo cs-table__logo--large">
+                </div>
+              </td>
+              <td>Marketplace connecting brands with athletes</td>
+              <td>Athletes only, completely different market from what Sportbnk is doing</td>
+            </tr>
+            <tr class="cs-table__highlight">
+              <td>
+                <div class="cs-table__tool cs-table__tool--logo-only">
+                  <img src="assets/sportbnk/logo.png" alt="Sportbnk" class="cs-table__logo cs-table__logo--large">
+                </div>
+              </td>
+              <td><strong>Discovery + signals + contact unlock + CRM in one place</strong></td>
+              <td><strong>The only tool that combines all of this for all three user types globally</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cs-callout cs-callout--compact reveal">
+        <p class="cs-callout__text">Every existing tool only looks backward — it shows you what already happened. Sportbnk's opportunity was to <strong>look forward</strong>: tell you what is about to happen so you can act before anyone else does.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 05 — KEY INSIGHTS ═══ -->
+  <section class="cs-section cs-section--dark" id="insights">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">05 — What I understood from the research</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">The things I learned that shaped the product</h2>
+
+      <div class="cs-insights__list">
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">01</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From founder conversation + business model mapping</span>
+            <h3>The credits model is the revenue engine — and it needed to be part of the design from the start</h3>
+            <p>I talked with the founder early about how the platform makes money. The model is: browsing is free, but unlocking a contact's details costs one credit. Understanding this changed how I designed the People tab. It had to show enough — the person's name, role, seniority — to make the contact feel worth unlocking. But it had to hold back the actual contact details.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">02</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From IA planning</span>
+            <h3>One org page with two tabs was the right call for the MVP</h3>
+            <p>I had to decide: build Sponsors and People as separate screens, or as tabs inside one Organisation page. I chose tabs. When a brand is looking at a club, their intent is sequential. They want to understand the sponsor landscape first (Sponsors tab), then find the right person to contact (People tab). That is one journey, not two.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">03</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From MVP scoping with founder</span>
+            <h3>We left things out on purpose — that was a deliberate product decision</h3>
+            <p>There were things we could have built: HubSpot integration, bulk export, advanced filtering, AI recommendations. We said no to all of it for the MVP. A product with five things that work well is more credible to a first user than one with fifteen things that feel half-finished.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">04</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From rights holder interviews</span>
+            <h3>Rights holders are the hardest user to design for</h3>
+            <p>A cricket club uses Sportbnk to find brand partners. But at the same time, brands are browsing that club and making decisions about them. They are using the product and being researched by it simultaneously. This is why brands and rights holders needed completely separate discovery flows, even though they are using the same data.</p>
+          </div>
+        </div>
+
+        <div class="cs-insight reveal">
+          <div class="cs-insight__num">05</div>
+          <div class="cs-insight__content">
+            <span class="cs-insight__source">From product analysis</span>
+            <h3>My Partners changes how often users come back</h3>
+            <p>A pure discovery tool gets used occasionally — when someone is looking for a new deal. My Partners means users also come back to manage the deals they already have. The more partners someone adds, the more relevant the platform's signals become for them personally. That makes the platform more useful over time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 06 — REVENUE MODEL ═══ -->
+  <section class="cs-section">
+    <div class="container">
+      <div class="cs-section__label reveal">06 — Revenue model</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">How the credits system works</h2>
+      <p class="cs-section__intro reveal reveal-delay-2">
+        The credit gate is placed at the exact moment a user wants to take action — not earlier, not later. I had to understand this before I could design the People tab correctly.
+      </p>
+
+      <div class="cs-revenue__flow reveal">
+        <div class="cs-revenue__step">
+          <div class="cs-revenue__step-num">1</div>
+          <div class="cs-revenue__step-badge cs-revenue__step-badge--free">Free</div>
+          <h3>Browse</h3>
+          <p>Search orgs, see their sport, current sponsors, deal status. No credits needed.</p>
+        </div>
+        <div class="cs-revenue__arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="cs-revenue__step">
+          <div class="cs-revenue__step-num">2</div>
+          <div class="cs-revenue__step-badge cs-revenue__step-badge--free">Free</div>
+          <h3>View profile</h3>
+          <p>Full org profile. Sponsors tab shows current deals and available categories. Still free.</p>
+        </div>
+        <div class="cs-revenue__arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="cs-revenue__step cs-revenue__step--gate">
+          <div class="cs-revenue__step-num">3</div>
+          <div class="cs-revenue__step-badge cs-revenue__step-badge--paid">1 Credit</div>
+          <h3>People tab</h3>
+          <p>See who the decision-makers are. Name and role visible. To get their contact details, pay 1 credit.</p>
+        </div>
+        <div class="cs-revenue__arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="cs-revenue__step">
+          <div class="cs-revenue__step-num">4</div>
+          <div class="cs-revenue__step-badge cs-revenue__step-badge--done">Unlocked</div>
+          <h3>Contact revealed</h3>
+          <p>Full contact details shown. User has what they need to start a conversation.</p>
+        </div>
+      </div>
+
+      <div class="cs-callout cs-callout--compact reveal">
+        <p class="cs-callout__text"><strong>Why the gate is at step 3:</strong> By the time a user reaches the People tab, they have already decided they want to take action. Intent is at its highest. Asking for a credit there feels fair because the user already sees the value.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 07 — INFORMATION ARCHITECTURE ═══ -->
+  <section class="cs-section cs-section--alt">
+    <div class="container">
+      <div class="cs-section__label reveal">07 — Information architecture</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">How the platform is structured and why</h2>
+
+      <div class="cs-ia__grid reveal">
+        <div class="cs-ia__item">
+          <div class="cs-ia__name">Signals Feed</div>
+          <div class="cs-ia__arrow">→</div>
+          <div class="cs-ia__reason">Top-level navigation, not a dashboard panel. If it is buried, users do not feel the platform's core value on first visit.</div>
+        </div>
+        <div class="cs-ia__item">
+          <div class="cs-ia__name">Organisations</div>
+          <div class="cs-ia__arrow">→</div>
+          <div class="cs-ia__reason">Sponsors tab (free) + People tab (1 credit). One page, two tabs — matches sequential user intent.</div>
+        </div>
+        <div class="cs-ia__item">
+          <div class="cs-ia__name">Companies</div>
+          <div class="cs-ia__arrow">→</div>
+          <div class="cs-ia__reason">Mirror of Organisations, but for rights holders browsing brands. Same data, different perspective.</div>
+        </div>
+        <div class="cs-ia__item">
+          <div class="cs-ia__name">My Partners</div>
+          <div class="cs-ia__arrow">→</div>
+          <div class="cs-ia__reason">CRM layer. Manage existing relationships, not just find new ones.</div>
+        </div>
+        <div class="cs-ia__item">
+          <div class="cs-ia__name">Dashboard</div>
+          <div class="cs-ia__arrow">→</div>
+          <div class="cs-ia__reason">Designed last. You can only design a good summary screen once you fully understand what is being summarised.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 08 — DESIGN DECISIONS ═══ -->
+  <section class="cs-section cs-section--dark" id="decisions">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">08 — Design decisions</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">Key decisions and the reasoning behind them</h2>
+
+      <div class="cs-decisions__list">
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 01</span>
+            <span class="cs-decision__topic">MVP Scope</span>
+          </div>
+          <h3>Kept the MVP small on purpose — and wrote it down</h3>
+          <p>The founder wanted to include CRM integrations, advanced analytics, and several other features. I pushed back and we agreed to leave them out. A smaller product that works well builds more trust with early users than a bigger product that feels unfinished.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> The founder wanted to show more to investors. I argued that a tight, coherent MVP tells a clearer story than a feature-rich one.
+          </div>
+        </div>
+
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 02</span>
+            <span class="cs-decision__topic">Navigation</span>
+          </div>
+          <h3>Signals Feed in the main nav, not a panel on the dashboard</h3>
+          <p>The original layout had signals as a panel on the dashboard. I moved it to its own top-level nav item. Where something sits in the navigation tells users what the product thinks is important.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> One more item in the navigation. I accepted it because the signals screen is the thing that makes this product different from a regular database.
+          </div>
+        </div>
+
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 03</span>
+            <span class="cs-decision__topic">Org Profile</span>
+          </div>
+          <h3>One org page with two tabs instead of two separate screens</h3>
+          <p>The user's intent when they open an org is sequential — they want to understand the sponsorship landscape first, then decide if they want to find a contact. That is one journey. One page with two tabs matches that.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> Both tabs have different content depth. The Sponsors tab is data-heavy; the People tab is simpler. That slight imbalance is worth the navigation simplicity.
+          </div>
+        </div>
+
+        <div class="cs-decision reveal">
+          <div class="cs-decision__header">
+            <span class="cs-decision__num">Decision 04</span>
+            <span class="cs-decision__topic">Dashboard</span>
+          </div>
+          <h3>Dashboard was designed last</h3>
+          <p>The founder expected the Dashboard first. I said we should design it last. A dashboard is a summary of a product. If you design it before you understand the product fully, you end up summarising your assumptions rather than real user needs.</p>
+          <div class="cs-decision__tradeoff">
+            <strong>Trade-off:</strong> Delayed a screen the founder wanted early. To bridge this, I walked him through the Signals and Organisations flow first.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 09 — THE PRODUCT ═══ -->
+  <section class="cs-section" id="product">
+    <div class="container">
+      <div class="cs-section__label reveal">09 — The product</div>
+      <h2 class="cs-section__title reveal reveal-delay-1">Production screens from Figma</h2>
+
+      <!-- Screen 1: Dashboard -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Command Center — Dashboard</h3>
+          <p class="cs-screen__desc">The dashboard surfaces featured opportunities, key metrics, and quick navigation. Designed last to ensure it accurately reflects what users actually need to see at a glance.</p>
+        </div>
+        <div class="cs-screen__image">
+          <img src="assets/sportbnk/dashboard.png" alt="Sportbnk Dashboard" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Screen 2: Organisations -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Organisations — Discovery View</h3>
+          <p class="cs-screen__desc">The main discovery view for brands. Filterable by sport, status, and deal type. The table columns follow the order a brand actually thinks: who is this org, what sport, who sponsors them already, are they worth pursuing.</p>
+        </div>
+        <div class="cs-screen__image">
+          <img src="assets/sportbnk/organisations.png" alt="Sportbnk Organisations" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Screen 3: Org Detail -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Organisation Profile — Sponsors & People</h3>
+          <p class="cs-screen__desc">One org page with two tabs. The Sponsors tab shows current deals and available categories. The People tab is where the credit gate lives — the moment of highest intent.</p>
+        </div>
+        <div class="cs-screen__image">
+          <img src="assets/sportbnk/org-detail.png" alt="Sportbnk Organisation Detail" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Screen 4: Contact Unlock -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Contact Unlock — Credit Gate</h3>
+          <p class="cs-screen__desc">The People tab shows enough to make a contact feel worth unlocking — name, role, their relationship to sponsorship decisions — without revealing actual contact details. The "260 Credits left" counter in the sidebar creates natural budget awareness without interrupting flow.</p>
+        </div>
+        <div class="cs-screen__image">
+          <img src="assets/sportbnk/contact-unlock.png" alt="Sportbnk Contact Unlock" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Screen 5: Companies -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">Companies — Brand Profile</h3>
+          <p class="cs-screen__desc">The Companies view mirrors Organisations but for rights holders browsing brands. Same data, different perspective — showing the brand's sponsorship portfolio across sports categories.</p>
+        </div>
+        <div class="cs-screen__image">
+          <img src="assets/sportbnk/companies.png" alt="Sportbnk Companies" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Screen 6: My Partners -->
+      <div class="cs-screen reveal">
+        <div class="cs-screen__info">
+          <h3 class="cs-screen__title">My Partners — CRM Layer</h3>
+          <p class="cs-screen__desc">The CRM layer that keeps users coming back. Manage existing relationships, track deal status, and add new partnerships. The more partners someone adds, the more relevant the platform's signals become for them personally.</p>
+        </div>
+        <div class="cs-screen__image">
+          <img src="assets/sportbnk/my-partners.png" alt="Sportbnk My Partners" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 10 — OUTCOME ═══ -->
+  <section class="cs-section cs-section--dark cs-outcome" id="outcome">
+    <div class="container">
+      <div class="cs-section__label cs-section__label--light reveal">10 — Outcome</div>
+      <h2 class="cs-section__title cs-section__title--light reveal reveal-delay-1">What got delivered and what it enabled</h2>
+      <p class="cs-section__intro cs-section__intro--light reveal reveal-delay-2">
+        The prototype went directly into investor conversations. The founder used the direction document I wrote as the basis for the product narrative in the pitch. No further design work was needed before the first beta users.
+      </p>
+
+      <div class="cs-outcome__stats reveal">
+        <div class="cs-outcome__stat">
+          <span class="cs-outcome__stat-value">25+</span>
+          <span class="cs-outcome__stat-label">Screens designed and ready for developer handoff</span>
+        </div>
+        <div class="cs-outcome__stat">
+          <span class="cs-outcome__stat-value">6d</span>
+          <span class="cs-outcome__stat-label">From brief to full prototype including research</span>
+        </div>
+        <div class="cs-outcome__stat">
+          <span class="cs-outcome__stat-value">3</span>
+          <span class="cs-outcome__stat-label">Complete user flows — brands, rights holders, agencies</span>
+        </div>
+      </div>
+
+      <div class="cs-outcome__results reveal">
+        <div class="cs-outcome__result">
+          <h3>Investor conversations</h3>
+          <p>The Figma prototype and direction document were used directly in fundraising. The research and positioning I did became the structure of the pitch narrative.</p>
+        </div>
+        <div class="cs-outcome__result">
+          <h3>Beta launch</h3>
+          <p>The platform was ready for the first 10 users without any additional design work. The MVP scoping decision paid off — the product was focused enough to feel complete.</p>
+        </div>
+      </div>
+
+      <div class="cs-outcome__quote reveal">
+        <p>The platform's job is to tell you what to do next — not just show you data.</p>
+        <span>That was the product idea I arrived at through the research. Every structural and design decision in Sportbnk came from that.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ NEXT PROJECT / CTA ═══ -->
+  <section class="cs-next">
+    <div class="container">
+      <div class="cs-next__inner reveal">
+        <span class="cs-next__label">Next project</span>
+        <a href="index.html#work" class="cs-next__link">
+          View all projects
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__text">© 2025 Yakshith. Designed with intention.</span>
+      <a href="#" class="footer__back-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        Back to top
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
