@@ -2403,3 +2403,322 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
     font-size: clamp(20px, 5vw, 28px);
   }
 }
+
+/* ══════════════════════════════════════
+   NEW — BRIEF 3-COLUMN GRID & ROLE CARD
+   ══════════════════════════════════════ */
+.cs-brief__grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+.cs-brief__card--role {
+  background: var(--bg-dark);
+  border-color: var(--border-dark);
+}
+.cs-brief__card--role .cs-brief__card-label {
+  color: var(--accent);
+}
+.cs-role-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cs-role-list li {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-on-dark-muted);
+  padding-left: 20px;
+  position: relative;
+}
+.cs-role-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ══════════════════════════════════════
+   NEW — RESEARCH METHODS
+   ══════════════════════════════════════ */
+.cs-research-methods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+.cs-research-method {
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--bg-card-dark);
+  border: 1px solid var(--border-dark);
+  transition: all var(--transition-fast);
+}
+.cs-research-method:hover {
+  border-color: rgba(45,212,168,.3);
+  transform: translateY(-4px);
+}
+.cs-research-method h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: -.01em;
+}
+.cs-research-method p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-on-dark-muted);
+}
+
+/* ══════════════════════════════════════
+   NEW — PATTERNS
+   ══════════════════════════════════════ */
+.cs-patterns {
+  margin-top: 20px;
+}
+.cs-patterns__header {
+  margin-bottom: 32px;
+}
+.cs-patterns__header h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -.02em;
+  margin-bottom: 12px;
+}
+.cs-patterns__header p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-on-dark-muted);
+  max-width: 600px;
+}
+.cs-patterns__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.cs-pattern {
+  padding: 32px;
+  border-radius: 16px;
+  background: rgba(45,212,168,.06);
+  border: 1px solid rgba(45,212,168,.12);
+}
+.cs-pattern__num {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 14px;
+  opacity: .6;
+}
+.cs-pattern h4 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: -.01em;
+}
+.cs-pattern p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-on-dark-muted);
+}
+
+/* ══════════════════════════════════════
+   NEW — MVP EXCLUSION LIST
+   ══════════════════════════════════════ */
+.cs-mvp-exclude {
+  padding: 40px;
+  border-radius: 16px;
+  background: var(--bg-card-dark);
+  border: 1px solid var(--border-dark);
+}
+.cs-mvp-exclude__title {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -.02em;
+  margin-bottom: 12px;
+}
+.cs-mvp-exclude__intro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-on-dark-muted);
+  margin-bottom: 32px;
+  max-width: 640px;
+}
+.cs-mvp-exclude__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.cs-mvp-exclude__item {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-dark);
+}
+.cs-mvp-exclude__item:last-child {
+  padding-bottom: 0;
+}
+.cs-mvp-exclude__name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.cs-mvp-exclude__name::before {
+  content: '✕';
+  color: #e74c3c;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.cs-mvp-exclude__reason {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-on-dark-muted);
+}
+
+/* ══════════════════════════════════════
+   NEW — DECISION FRAMEWORK
+   ══════════════════════════════════════ */
+.cs-decision__framework {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.cs-decision__block {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.06);
+}
+.cs-decision__block-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 10px;
+}
+.cs-decision__block p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-on-dark-muted);
+  margin-bottom: 0;
+}
+
+/* ══════════════════════════════════════
+   NEW — OUTCOME 4-COLUMN GRID
+   ══════════════════════════════════════ */
+.cs-outcome__results--four {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ══════════════════════════════════════
+   NEW — WHAT'S NEXT SECTION
+   ══════════════════════════════════════ */
+.cs-whats-next__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.cs-whats-next__item {
+  padding: 36px;
+  border-radius: 16px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+.cs-whats-next__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.06);
+}
+.cs-whats-next__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent-glow);
+  border: 1px solid rgba(45,212,168,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--accent-dark);
+}
+.cs-whats-next__item h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  letter-spacing: -.01em;
+}
+.cs-whats-next__item p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ══════════════════════════════════════
+   NEW COMPONENTS — RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .cs-brief__grid--three {
+    grid-template-columns: 1fr;
+  }
+  .cs-research-methods {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .cs-patterns__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .cs-mvp-exclude__item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .cs-decision__framework {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .cs-whats-next__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .cs-outcome__results--four {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-mvp-exclude {
+    padding: 24px;
+  }
+  .cs-mvp-exclude__name {
+    font-size: 14px;
+  }
+  .cs-decision__block {
+    padding: 16px;
+  }
+  .cs-whats-next__item {
+    padding: 28px;
+  }
+}
