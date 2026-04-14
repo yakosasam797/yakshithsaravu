@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WyshKit — Case Study | Yakshith</title>
+  <meta name="description" content="WyshKit case study — a quick commerce gifting marketplace for India. Redesigned the order flow with a pay-first, preview-after model that reduced drop-offs and made customization scalable.">
+  <meta name="keywords" content="WyshKit, Case Study, Product Design, Mobile App, Quick Commerce, Gifting, UX Design, Yakshith">
+  <meta name="author" content="Yakshith">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="wyshkit-cs.css">
+</head>
+<body class="cs-body wk-body">
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <span class="page-loader__text">WyshKit.</span>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══ CASE STUDY NAV ═══ -->
+  <nav class="cs-nav" id="nav">
+    <div class="container">
+      <div class="cs-nav__inner">
+        <a href="index.html" class="cs-nav__back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Yakshith.
+        </a>
+        <div class="cs-nav__links">
+          <a href="#opportunity" class="cs-nav__link">Opportunity</a>
+          <a href="#problem" class="cs-nav__link">Problem</a>
+          <a href="#decision" class="cs-nav__link">Key Decision</a>
+          <a href="#product" class="cs-nav__link">Product</a>
+          <a href="#impact" class="cs-nav__link">Impact</a>
+        </div>
+        <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#opportunity">Opportunity</a>
+    <a href="#problem">Problem</a>
+    <a href="#decision">Key Decision</a>
+    <a href="#product">Product</a>
+    <a href="#impact">Impact</a>
+    <a href="index.html" class="mobile-menu__resume">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Portfolio
+    </a>
+  </div>
+
+  <!-- ═══ HERO — DARK COMPOSITE ═══ -->
+  <section class="wk-hero">
+    <div class="wk-hero__inner">
+      <div class="wk-hero__text">
+        <span class="wk-hero__badge">Case Study</span>
+        <h1 class="wk-hero__title">WyshKit</h1>
+        <p class="wk-hero__subtitle">Quick commerce gifting marketplace — personalised gifts delivered in 40 minutes, with a pay-first customisation flow that changes everything.</p>
+      </div>
+      <div class="wk-hero__screens">
+        <div class="wk-hero__phone wk-hero__phone--left">
+          <img src="assets/Wyshkit/Frame 564.png" alt="WyshKit vendor storefront" loading="eager">
+        </div>
+        <div class="wk-hero__phone wk-hero__phone--center">
+          <img src="assets/Wyshkit/Frame 563.png" alt="WyshKit home screen" loading="eager">
+        </div>
+        <div class="wk-hero__phone wk-hero__phone--right">
+          <img src="assets/Wyshkit/Frame 573.png" alt="WyshKit preview review" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECT BACKGROUND ═══ -->
+  <section class="cs-background">
+    <div class="container">
+      <div class="cs-background__layout">
+        <!-- Left sidebar: Project metadata -->
+        <div class="cs-background__meta reveal">
+          <div class="cs-background__meta-item">
+            <span class="cs-background__meta-label">Project</span>
+            <span class="cs-background__meta-value">WyshKit</span>
+          </div>
+          <div class="cs-background__meta-item">
+            <span class="cs-background__meta-label">Platform</span>
+            <span class="cs-background__meta-value">Mobile App (iOS / Android)</span>
+          </div>
+          <div class="cs-background__meta-item">
+            <span class="cs-background__meta-label">Category</span>
+            <span class="cs-background__meta-value">Quick Commerce / Gifting</span>
+          </div>
+          <div class="cs-background__meta-item">
+            <span class="cs-background__meta-label">Role</span>
+            <span class="cs-background__meta-value">Product Designer</span>
+          </div>
+          <div class="cs-background__meta-item">
+            <span class="cs-background__meta-label">Market Size</span>
+            <span class="cs-background__meta-value">$92B by 2030</span>
+          </div>
+        </div>
+        <!-- Right: Project Background content -->
+        <div class="cs-background__content reveal reveal-delay-1">
+          <h2 class="cs-background__title">Project<br>Background</h2>
+          <div class="cs-background__text">
+            <p>WyshKit is a quick commerce gifting marketplace for India — fusing Swiggy-like vendor discovery with gifting-specific curation and personalisation. It enables seamless B2C experiences for personalised gifts, hampers, and bulk orders, with 40-minute hyperlocal delivery.</p>
+            <p>I owned the end-to-end product design — from the discovery experience and cross-listing architecture to the checkout flow, order tracking, and the customisation pipeline. The goal was to build a platform where vendors expand offerings without inventory ownership, and users get authentic, personalised gifts delivered at quick-commerce speed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE OPPORTUNITY ═══ -->
+  <section class="wk-glance" id="opportunity">
+    <div class="container">
+      <h2 class="wk-glance__heading reveal">The opportunity at a glance</h2>
+      <div class="wk-glance__cards reveal reveal-delay-1">
+        <div class="wk-glance__card">
+          <span class="wk-glance__emoji">📦</span>
+          <span class="wk-glance__card-label">THE MARKET GAP</span>
+          <p>India's gifting market is valued at $92B by 2030, but traditional platforms (FNP, IGP) lag with delays. Quick commerce is booming ($57B) via Blinkit — but none focus on personalized gifting with vendor curation.</p>
+        </div>
+        <div class="wk-glance__card">
+          <span class="wk-glance__emoji">🎯</span>
+          <span class="wk-glance__card-label">WHAT I OWNED</span>
+          <p>End-to-end product design for a mobile marketplace — vendor discovery, product detail pages, the personalisation-to-preview pipeline, checkout, order tracking, feedback loops, and the design system.</p>
+        </div>
+        <div class="wk-glance__card">
+          <span class="wk-glance__emoji">💡</span>
+          <span class="wk-glance__card-label">THE BET</span>
+          <p>Pay first, preview after — a counterintuitive order flow that filters out uncommitted buyers before they enter the customisation loop, reducing vendor effort and making the pipeline predictable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE CORE PROBLEM ═══ -->
+  <section class="wk-problem" id="problem">
+    <div class="container">
+      <span class="wk-section__emoji reveal">🔍</span>
+      <span class="wk-section__label reveal">THE CORE PROBLEM</span>
+      <h2 class="wk-section__title reveal reveal-delay-1">The customisation loop<br>was breaking at scale</h2>
+      <p class="wk-section__intro reveal reveal-delay-2">
+        In the traditional gifting model, personalisation is manual and expensive. Clients request customisation, vendors create samples, revisions go back and forth — and many orders drop off during this cycle. The process doesn't scale.
+      </p>
+
+      <div class="wk-flows reveal">
+        <!-- Before -->
+        <div class="wk-flow wk-flow--before">
+          <span class="wk-flow__badge wk-flow__badge--old">Traditional Flow</span>
+          <h3 class="wk-flow__title">How gifting worked before</h3>
+          <div class="wk-flow__steps">
+            <div class="wk-flow__step">
+              <span class="wk-flow__step-num">1</span>
+              <span class="wk-flow__step-text">Customer browses and requests customisation</span>
+            </div>
+            <div class="wk-flow__step">
+              <span class="wk-flow__step-num">2</span>
+              <span class="wk-flow__step-text">Vendor creates a physical sample or preview</span>
+            </div>
+            <div class="wk-flow__step">
+              <span class="wk-flow__step-num">3</span>
+              <span class="wk-flow__step-text">Customer reviews, requests changes</span>
+            </div>
+            <div class="wk-flow__step">
+              <span class="wk-flow__step-num">4</span>
+              <span class="wk-flow__step-text">Multiple revision rounds — vendor effort wasted</span>
+            </div>
+            <div class="wk-flow__step wk-flow__step--strike">
+              <span class="wk-flow__step-num">5</span>
+              <span class="wk-flow__step-text">Customer drops off — no payment committed</span>
+            </div>
+          </div>
+          <div class="wk-flow__result">
+            ⚠️ High drop-off rate. Vendors waste time on uncommitted customers. Not scalable.
+          </div>
+        </div>
+
+        <!-- After -->
+        <div class="wk-flow wk-flow--after">
+          <span class="wk-flow__badge wk-flow__badge--new">WyshKit Flow</span>
+          <h3 class="wk-flow__title">How we redesigned it</h3>
+          <div class="wk-flow__steps">
+            <div class="wk-flow__step">
+              <span class="wk-flow__step-num">1</span>
+              <span class="wk-flow__step-text">Customer browses, selects personalisation options</span>
+            </div>
+            <div class="wk-flow__step">
+              <span class="wk-flow__step-num">2</span>
+              <span class="wk-flow__step-text"><strong>Completes payment first</strong> — commitment locked</span>
+            </div>
+            <div class="wk-flow__step">
+              <span class="wk-flow__step-num">3</span>
+              <span class="wk-flow__step-text">Shares customisation details (text, photos, logo)</span>
+            </div>
+            <div class="wk-flow__step">
+              <span class="wk-flow__step-num">4</span>
+              <span class="wk-flow__step-text">Vendor creates digital preview — customer approves or requests one revision</span>
+            </div>
+            <div class="wk-flow__step">
+              <span class="wk-flow__step-num">5</span>
+              <span class="wk-flow__step-text">Production begins → Delivery in 40 min (hyperlocal)</span>
+            </div>
+          </div>
+          <div class="wk-flow__result">
+            ✓ Only committed customers enter the loop. Vendor effort drops. Pipeline becomes predictable.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE DESIGN DECISION THAT CHANGED EVERYTHING ═══ -->
+  <section class="wk-decision" id="decision">
+    <div class="container">
+      <div class="wk-decision__header reveal">
+        <span class="wk-decision__label">⭐ The Key Design Decision</span>
+        <h2 class="wk-decision__title">Pay first, preview after — the decision that made customisation scalable</h2>
+        <p class="wk-decision__subtitle">
+          I redesigned the order flow so payment happens before the preview. This single decision filtered out uncommitted buyers, reduced unnecessary vendor iterations, and created a predictable order pipeline.
+        </p>
+      </div>
+
+      <!-- Flow Pipeline -->
+      <div class="wk-pipeline reveal">
+        <div class="wk-pipeline__step">
+          <span class="wk-pipeline__icon">🔍</span>
+          <span class="wk-pipeline__step-label">Browse</span>
+        </div>
+        <div class="wk-pipeline__arrow">→</div>
+        <div class="wk-pipeline__step">
+          <span class="wk-pipeline__icon">✨</span>
+          <span class="wk-pipeline__step-label">Customise</span>
+        </div>
+        <div class="wk-pipeline__arrow">→</div>
+        <div class="wk-pipeline__step wk-pipeline__step--highlight">
+          <span class="wk-pipeline__icon">💳</span>
+          <span class="wk-pipeline__step-label">Pay First</span>
+        </div>
+        <div class="wk-pipeline__arrow">→</div>
+        <div class="wk-pipeline__step">
+          <span class="wk-pipeline__icon">📝</span>
+          <span class="wk-pipeline__step-label">Share Details</span>
+        </div>
+        <div class="wk-pipeline__arrow">→</div>
+        <div class="wk-pipeline__step">
+          <span class="wk-pipeline__icon">👁️</span>
+          <span class="wk-pipeline__step-label">Preview</span>
+        </div>
+        <div class="wk-pipeline__arrow">→</div>
+        <div class="wk-pipeline__step">
+          <span class="wk-pipeline__icon">🤝</span>
+          <span class="wk-pipeline__step-label">Approve</span>
+        </div>
+        <div class="wk-pipeline__arrow">→</div>
+        <div class="wk-pipeline__step">
+          <span class="wk-pipeline__icon">🚀</span>
+          <span class="wk-pipeline__step-label">Deliver</span>
+        </div>
+      </div>
+
+      <!-- Supporting Screens -->
+      <div class="wk-screens wk-screens--quad wk-screens--center reveal">
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 567.png" alt="Checkout — payment commitment" loading="lazy">
+          <span class="wk-screen__caption">Payment before preview</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 571.png" alt="Share customisation details" loading="lazy">
+          <span class="wk-screen__caption">Share details post-payment</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 573.png" alt="Preview review — approve or revise" loading="lazy">
+          <span class="wk-screen__caption">Preview — approve or revise</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 574.png" alt="Live delivery tracking" loading="lazy">
+          <span class="wk-screen__caption">Live tracking → delivery</span>
+        </div>
+      </div>
+
+      <!-- Impact Cards -->
+      <div class="wk-decision__impact reveal">
+        <div class="wk-decision__impact-card">
+          <h4>Reduced drop-offs</h4>
+          <p>Only paid customers enter the customisation loop. Vendors no longer waste effort on uncommitted browsers — every preview request has a committed buyer behind it.</p>
+        </div>
+        <div class="wk-decision__impact-card">
+          <h4>Fewer revision cycles</h4>
+          <p>With financial commitment upfront, customers provide clear, complete requirements. Back-and-forth decreased significantly — most orders approved on first or second preview.</p>
+        </div>
+        <div class="wk-decision__impact-card">
+          <h4>Predictable pipeline</h4>
+          <p>Revenue is locked before production starts. Vendors can forecast workload accurately, and the platform has cleaner order tracking and fulfilment metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE PRODUCT — VISUAL SHOWCASE ═══ -->
+  <section class="wk-product" id="product">
+    <div class="container">
+      <span class="wk-section__emoji reveal">📱</span>
+      <span class="wk-section__label reveal">THE PRODUCT</span>
+      <h2 class="wk-section__title reveal reveal-delay-1">Production Screens</h2>
+      <p class="wk-section__intro reveal reveal-delay-2">
+        Every screen maps back to a product decision. The design follows how users think — discover, evaluate, commit, customise, track, review.
+      </p>
+    </div>
+
+    <!-- ── Home & Discovery ── -->
+    <div class="wk-showcase">
+      <div class="container">
+        <div class="wk-showcase__label reveal">Home & Discovery</div>
+        <h3 class="wk-showcase__title reveal">Vendor-first discovery — like Swiggy, but for gifts</h3>
+        <p class="wk-showcase__desc reveal">Search shows nearest vendors first. Products appear from their own listings or cross-listed brand catalogue. Category filters (Fresh, Bulk, Essentials) mirror how users actually shop for gifts — by occasion and type, not by SKU.</p>
+      </div>
+      <div class="wk-screens wk-screens--trio wk-screens--center reveal">
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 563.png" alt="WyshKit Home — vendor-first discovery" loading="lazy">
+          <span class="wk-screen__caption">Home — nearest vendors, categories, seasonal picks</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 580.png" alt="Address selection bottom sheet" loading="lazy">
+          <span class="wk-screen__caption">Address selection — hyperlocal context</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 564.png" alt="Vendor storefront — The Artisan Larder" loading="lazy">
+          <span class="wk-screen__caption">Vendor storefront — curated product grid</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Product Detail & Personalization ── -->
+    <div class="wk-showcase wk-showcase--alt">
+      <div class="container">
+        <div class="wk-showcase__label reveal">Product Detail</div>
+        <h3 class="wk-showcase__title reveal">Where personalisation begins</h3>
+        <p class="wk-showcase__desc reveal">The PDP borrows from Zepto's swipeable image pattern but adds gifting-specific elements: gift wrapping (+₹50), custom message card (+₹15). A key design choice — the info callout clearly states "details will be collected after payment," setting expectations early for the pay-first flow.</p>
+      </div>
+      <div class="wk-screens wk-screens--duo wk-screens--center reveal">
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 565.png" alt="Product detail — top section with images and pricing" loading="lazy">
+          <span class="wk-screen__caption">PDP — product images, pricing, delivery ETA</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 566.png" alt="Product detail — personalisation options and description" loading="lazy">
+          <span class="wk-screen__caption">Personalisation options — gift wrap, custom card</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Search ── -->
+    <div class="wk-showcase">
+      <div class="container">
+        <div class="wk-showcase__label reveal">Search</div>
+      </div>
+      <div class="wk-screens wk-screens--single wk-screens--center reveal">
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 579.png" alt="Search — recent queries" loading="lazy">
+          <span class="wk-screen__caption">Search — recent queries, product and brand search</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Checkout & Payment ── -->
+    <div class="wk-showcase wk-showcase--alt">
+      <div class="container">
+        <div class="wk-showcase__label reveal">Checkout & Payment</div>
+        <h3 class="wk-showcase__title reveal">The commitment point</h3>
+        <p class="wk-showcase__desc reveal">This is where the pay-first model comes alive. The checkout shows order summary, delivery address, and payment methods. Bill details include platform fee, delivery, and WyshCredits — modelled after Blinkit's pricing transparency. 100% advance for custom/bulk orders — no COD.</p>
+      </div>
+      <div class="wk-screens wk-screens--trio wk-screens--center reveal">
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 567.png" alt="Checkout — order summary and payment" loading="lazy">
+          <span class="wk-screen__caption">Checkout — order summary, address, payment</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 568.png" alt="Payment methods — UPI, cards, wallets, COD" loading="lazy">
+          <span class="wk-screen__caption">Payment methods — UPI, cards, wallets, COD</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 569.png" alt="Bill details — tax, fees, credits" loading="lazy">
+          <span class="wk-screen__caption">Bill details — GSTIN, estimates, credits</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── The Customization Loop ── -->
+    <div class="wk-showcase wk-showcase--warm">
+      <div class="container">
+        <div class="wk-showcase__label reveal">The Customisation Loop</div>
+        <h3 class="wk-showcase__title reveal">Post-payment personalisation — the core flow</h3>
+        <p class="wk-showcase__desc reveal">After payment, the user enters the customisation pipeline. They share engraving text, reference photos, and logos. The vendor creates a digital preview ("Elite Handshake"). Users approve or request a single revision — all within the order tracking timeline. A timer enforces priority production SLAs.</p>
+      </div>
+      <div class="wk-screens wk-screens--quad wk-screens--center reveal">
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 570.png" alt="Order placed confirmation" loading="lazy">
+          <span class="wk-screen__caption">Order confirmed — vendor acknowledged</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 571.png" alt="Share customisation details — empty state" loading="lazy">
+          <span class="wk-screen__caption">Share details — name, photo upload</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 572.png" alt="Share customisation details — filled state" loading="lazy">
+          <span class="wk-screen__caption">Details submitted — photo uploaded</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 573.png" alt="Preview review — approve or request revision" loading="lazy">
+          <span class="wk-screen__caption">Preview review — approve or revise</span>
+        </div>
+      </div>
+      <div class="wk-screens wk-screens--duo wk-screens--center reveal" style="margin-top: 8px;">
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 578.png" alt="Request revision form" loading="lazy">
+          <span class="wk-screen__caption">Revision request — describe changes</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 574.png" alt="Live delivery tracking with map" loading="lazy">
+          <span class="wk-screen__caption">Live tracking — out for delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Post-Delivery & Feedback ── -->
+    <div class="wk-showcase">
+      <div class="container">
+        <div class="wk-showcase__label reveal">Feedback & Accuracy</div>
+        <h3 class="wk-showcase__title reveal">Closing the loop — did it match the preview?</h3>
+        <p class="wk-showcase__desc reveal">Post-delivery, users rate each item and answer an accuracy query: "Did it match your preview?" This creates a quality signal for vendor accountability and fuels the WyshCredits rewards system (₹50–₹250 based on order value). It also validates whether the pay-first model actually delivers the right outcomes.</p>
+      </div>
+      <div class="wk-screens wk-screens--duo wk-screens--center reveal">
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 575.png" alt="Order delivered — experience and accuracy rating" loading="lazy">
+          <span class="wk-screen__caption">Delivered — accuracy query + item rating</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 576.png" alt="Full feedback — vendor, delivery, accuracy" loading="lazy">
+          <span class="wk-screen__caption">Full feedback — vendor service + delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Orders Management ── -->
+    <div class="wk-showcase wk-showcase--alt">
+      <div class="container">
+        <div class="wk-showcase__label reveal">Order Management</div>
+        <h3 class="wk-showcase__title reveal">Active orders, past orders — at a glance</h3>
+        <p class="wk-showcase__desc reveal">The orders screen surfaces real-time status badges — "Share Details," "Preparing," "Handshake Review" — directly on order cards. Users can track, reorder, or download invoices without navigating deep. Progress bars show where each order sits in the pipeline.</p>
+      </div>
+      <div class="wk-screens wk-screens--duo wk-screens--center reveal">
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 583.png" alt="Active orders with status badges" loading="lazy">
+          <span class="wk-screen__caption">Active orders — status badges, progress bars</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 584.png" alt="Past orders — delivered, cancelled, refunded" loading="lazy">
+          <span class="wk-screen__caption">Past orders — reorder, invoice download</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Account & Profile ── -->
+    <div class="wk-showcase">
+      <div class="container">
+        <div class="wk-showcase__label reveal">Account</div>
+        <h3 class="wk-showcase__title reveal">WyshCredits, addresses, settings — all in one place</h3>
+        <p class="wk-showcase__desc reveal">The account page surfaces WyshCredits balance prominently — a retention mechanism where post-feedback credits (₹50–₹250) drive repeat purchases. Settings are cleanly grouped with descriptive subtext, following conventions from Swiggy and Blinkit.</p>
+      </div>
+      <div class="wk-screens wk-screens--duo wk-screens--center reveal">
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 586.png" alt="Account page — profile, credits, settings" loading="lazy">
+          <span class="wk-screen__caption">Account — Elite Member, ₹150 WyshCredits</span>
+        </div>
+        <div class="wk-screen">
+          <img src="assets/Wyshkit/Frame 582.png" alt="Add new address form" loading="lazy">
+          <span class="wk-screen__caption">Address form — structured for hyperlocal delivery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ KEY DESIGN DECISIONS ═══ -->
+  <section class="wk-section wk-section--alt" id="strategy">
+    <div class="container">
+      <span class="wk-section__emoji reveal">⚡</span>
+      <span class="wk-section__label reveal">DESIGN DECISIONS</span>
+      <h2 class="wk-section__title reveal reveal-delay-1">Strategic choices that<br>shaped the product</h2>
+      <p class="wk-section__intro reveal reveal-delay-2">
+        Every feature decision traced back to a user need or business constraint. Here's what I prioritised — and why.
+      </p>
+
+      <div class="wk-decisions reveal">
+        <div class="wk-decisions__grid">
+          <div class="wk-decisions__item">
+            <strong>Vendor-first discovery → trust over selection</strong>
+            <p>Showing nearest vendors first (like Swiggy) builds trust through locality and "100% Authentic" badges. Cross-listing details hidden from UI — users don't need to know if a Boat speaker comes via a gifting vendor. They need to trust it's authentic.</p>
+          </div>
+          <div class="wk-decisions__item">
+            <strong>Personalisation details after payment → serious buyers only</strong>
+            <p>By collecting customisation inputs post-payment, we ensured only committed customers enter the vendor's production queue. This isn't about locking users in — it's about respecting vendor effort and making the pipeline scalable.</p>
+          </div>
+          <div class="wk-decisions__item">
+            <strong>Multi-cart architecture → parallel ordering</strong>
+            <p>Independent vendor tabs for parallel cart management. No preview blocking — users can continue shopping while one vendor prepares a preview. Partial or consolidated checkout, modelled after how Swiggy handles multiple restaurant orders.</p>
+          </div>
+          <div class="wk-decisions__item">
+            <strong>WyshCredits as a feedback loop → retention + quality</strong>
+            <p>Post-delivery credits (₹50 for ₹5K+, ₹100 for ₹15K+, ₹250 for ₹50K+) serve a dual purpose: incentivise repeat orders and drive feedback that holds vendors accountable. The "Did it match your preview?" query is the quality anchor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ IMPACT ═══ -->
+  <section class="wk-section wk-section--dark" id="impact">
+    <div class="container">
+      <span class="wk-section__emoji reveal">📊</span>
+      <span class="wk-section__label wk-section__label--light reveal">IMPACT & REFLECTION</span>
+      <h2 class="wk-section__title wk-section__title--light reveal reveal-delay-1">What the Work Enabled</h2>
+      <p class="wk-section__intro wk-section__intro--light reveal reveal-delay-2">
+        The pay-first model wasn't just a design choice — it was an operational decision that reshaped how the business works. Here's what it enabled.
+      </p>
+
+      <div class="wk-impact__grid reveal">
+        <div class="wk-impact__card">
+          <h3>Streamlined operations</h3>
+          <p>Vendors no longer invest effort in uncommitted customers. Every customisation request now has a paid order behind it — the production queue is clean and predictable.</p>
+        </div>
+        <div class="wk-impact__card">
+          <h3>Reduced preview-stage drop-offs</h3>
+          <p>By moving payment before the preview, the traditional drop-off point is eliminated. Customers who pay are invested — they complete the loop.</p>
+        </div>
+        <div class="wk-impact__card">
+          <h3>Scalable customisation pipeline</h3>
+          <p>The digital preview system (Elite Handshake) with structured approve/revise actions replaces manual back-and-forth. It works at any order volume — not just the first 10 vendors.</p>
+        </div>
+        <div class="wk-impact__card">
+          <h3>Predictable order pipeline</h3>
+          <p>Revenue is locked before production starts. Realistic success rates of 93–98% (comparable to Zomato's 95% order completion) with clear tracking of drop-offs from stock-outs (2–3%) or preview delays (1–2%).</p>
+        </div>
+      </div>
+
+      <div class="wk-impact__quote reveal">
+        <p>The smartest design decision was making payment the gateway to personalisation — not the other way around.</p>
+        <span>This single choice made everything downstream predictable.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ NEXT PROJECT / CTA ═══ -->
+  <section class="cs-next">
+    <div class="container">
+      <div class="cs-next__inner reveal">
+        <span class="cs-next__label">Next project</span>
+        <a href="index.html#work" class="cs-next__link">
+          View all projects
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__text">© 2026 Yakshith.</span>
+      <a href="#" class="footer__back-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        Back to top
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
