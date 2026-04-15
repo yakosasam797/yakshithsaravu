@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Tilt effect on project cards ──
   if (hasFinePointer) {
-    const cards = document.querySelectorAll('.project-card');
+    const cards = document.querySelectorAll('.work__project');
 
     cards.forEach(card => {
       card.addEventListener('mousemove', (e) => {

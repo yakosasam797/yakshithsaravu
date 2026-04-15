@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yakshith — Product & Visual Designer</title>
+  <title>Yakshith — Product Designer</title>
   <meta name="description" content="Yakshith is a Product Designer with 2+ years of experience owning end-to-end UX for B2C platforms, dashboards, and responsive web products.">
   <meta name="keywords" content="Product Designer, UX Designer, Visual Designer, UI Designer, Yakshith, Portfolio">
   <meta name="author" content="Yakshith">
 
-  <meta property="og:title" content="Yakshith — Product & Visual Designer">
+  <meta property="og:title" content="Yakshith — Product Designer">
   <meta property="og:description" content="Product Designer with 2+ years of experience in end-to-end UX for B2C platforms.">
   <meta property="og:type" content="website">
 
@@ -34,7 +34,9 @@
     <div class="container">
       <div class="nav__top">
         <div class="nav__logo-wrap">
-          <a href="#" class="nav__logo">Yakshith.</a>
+          <a href="#" class="nav__logo" aria-label="Yakshith - Home">
+            <img src="assets/Yakshith logo.png" alt="Yakshith" class="nav__logo-icon" width="38" height="38">
+          </a>
           <!-- Logo Hover Popup -->
           <div class="nav__profile-popup">
             <div class="popup__header">
@@ -55,11 +57,14 @@
               </div>
             </div>
             <div class="popup__companies">
-              <span class="popup__companies-label">Companies</span>
+              <span class="popup__companies-label">Software Skills</span>
               <div class="popup__company-tags">
-                <span>Basecampmart (Wyshkit)</span>
-                <span>WebSort (Globethrough)</span>
-                <span>Zephyr Technologies</span>
+                <span>Figma</span>
+                <span>Photoshop</span>
+                <span>Illustrator</span>
+                <span>Framer</span>
+                <span>Jira</span>
+                <span>Slack</span>
               </div>
             </div>
           </div>
@@ -69,9 +74,9 @@
             Case Studies
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
           </a>
-          <a href="assets/Yakshith_Resume.pdf" download class="nav__cta-link">
+          <a href="https://drive.google.com/file/d/1QNExzb_LPTb4QKpcmKx3EN8YPF4ycZrO/view?usp=drivesdk" target="_blank" class="nav__cta-link">
             Resume
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
           </a>
           <a href="mailto:yakshithsarav@gmail.com" class="nav__cta-link">
             yakshithsarav@gmail.com
@@ -91,11 +96,7 @@
         <div class="nav__sec-links">
           <a href="#work" class="nav__sec-link">Work</a>
           <span class="nav__sec-dot">·</span>
-          <a href="#about" class="nav__sec-link">About</a>
-          <span class="nav__sec-dot">·</span>
-          <a href="#experience" class="nav__sec-link">Experience</a>
-          <span class="nav__sec-dot">·</span>
-          <a href="#skills" class="nav__sec-link">Skills</a>
+          <a href="#tools" class="nav__sec-link">Tools</a>
           <span class="nav__sec-dot">·</span>
           <a href="#contact" class="nav__sec-link">Contact</a>
         </div>
@@ -106,37 +107,63 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
+    <a href="#tools">Tools</a>
     <a href="#contact">Contact</a>
-    <a href="assets/Yakshith_Resume.pdf" download class="mobile-menu__resume">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Download Resume
+    <a href="https://drive.google.com/file/d/1QNExzb_LPTb4QKpcmKx3EN8YPF4ycZrO/view?usp=drivesdk" target="_blank" class="mobile-menu__resume">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      View Resume
     </a>
   </div>
 
   <!-- ═══ HERO SECTION ═══ -->
   <section class="hero" id="hero">
     <div class="hero__content">
-      <div class="hero__title-wrapper">
-        <h1 class="hero__title">
-          <span class="hero__title-line1">Product</span>
-          <span class="hero__title-line2">& Visual Designer</span>
-        </h1>
-      </div>
-      <p class="hero__tagline">Hey, I'm Yakshith — a product designer based in Bengaluru, India.</p>
-      <div class="hero__ctas">
-        <a href="#contact" class="hero__cta-primary">
-          Contact Me
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </a>
-        <a href="https://wa.me/917975218181" target="_blank" class="hero__cta-whatsapp" aria-label="Chat on WhatsApp">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          <span class="hero__cta-whatsapp-text">WhatsApp</span>
-        </a>
+      <div class="hero__intro">
+        <!-- 1. Avatar + Title inline -->
+        <div class="hero__headline">
+          <div class="hero__avatar">
+            <img src="assets/profile.png" alt="Yakshith" class="hero__avatar-img">
+          </div>
+          <h1 class="hero__title">Product Designer</h1>
+        </div>
+        <!-- 2. Paragraph -->
+        <p class="hero__tagline">Helping teams design clarity in <strong>complex systems</strong>, blending <strong>research, empathy</strong> and <strong>scalable thinking</strong>.</p>
+        <!-- 4. CTAs -->
+        <div class="hero__ctas">
+          <a href="#contact" class="hero__cta-primary">
+            Contact Me
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+          <a href="https://drive.google.com/file/d/1QNExzb_LPTb4QKpcmKx3EN8YPF4ycZrO/view?usp=drivesdk" target="_blank" class="hero__cta-resume">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
+        </div>
+        <!-- 5. Software Skills -->
+        <div class="hero__skills-row">
+          <span class="hero__skill-pill">
+            <img src="from me/Figma.png" alt="" class="hero__skill-icon"> Figma
+          </span>
+          <span class="hero__skill-pill">
+            <span class="hero__skill-badge" style="background:#001E36;"><span style="color:#31A8FF;font-weight:700;font-size:11px;">Ps</span></span>
+            Photoshop
+          </span>
+          <span class="hero__skill-pill">
+            <span class="hero__skill-badge" style="background:#330000;"><span style="color:#FF9A00;font-weight:700;font-size:11px;">Ai</span></span>
+            Illustrator
+          </span>
+          <span class="hero__skill-pill">
+            <img src="from me/framer_symbol.svg.png" alt="" class="hero__skill-icon"> Framer
+          </span>
+          <span class="hero__skill-pill">
+            <svg class="hero__skill-svg" width="16" height="16" viewBox="0 0 24 24" fill="#0052CC"><path d="M11.53 2c0 2.4 1.97 4.35 4.35 4.35h1.78v1.7c0 2.4 1.94 4.34 4.34 4.35V2.84a.84.84 0 00-.84-.84H11.53zM6.77 7.17c0 2.39 1.97 4.34 4.35 4.34h1.78v1.71c0 2.4 1.94 4.34 4.34 4.35V7.97a.84.84 0 00-.83-.8H6.77zM2 12.31c0 2.4 1.97 4.35 4.35 4.35h1.78v1.71c.01 2.39 1.95 4.34 4.35 4.34v-9.57a.84.84 0 00-.84-.83H2z"/></svg>
+            Jira
+          </span>
+          <span class="hero__skill-pill">
+            <svg class="hero__skill-svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#E01E5A" d="M5.042 15.165a2.528 2.528 0 01-2.52 2.523A2.528 2.528 0 010 15.165a2.527 2.527 0 012.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 012.521-2.52 2.527 2.527 0 012.521 2.52v6.313A2.528 2.528 0 018.834 24a2.528 2.528 0 01-2.521-2.522v-6.313z"/><path fill="#36C5F0" d="M8.834 5.042a2.528 2.528 0 01-2.521-2.52A2.528 2.528 0 018.834 0a2.528 2.528 0 012.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 012.521 2.521 2.528 2.528 0 01-2.521 2.521H2.522A2.528 2.528 0 010 8.834a2.528 2.528 0 012.522-2.521h6.312z"/><path fill="#2EB67D" d="M18.956 8.834a2.528 2.528 0 012.522-2.521A2.528 2.528 0 0124 8.834a2.528 2.528 0 01-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 01-2.523 2.521 2.527 2.527 0 01-2.52-2.521V2.522A2.527 2.527 0 0115.165 0a2.528 2.528 0 012.523 2.522v6.312z"/><path fill="#ECB22E" d="M15.165 18.956a2.528 2.528 0 012.523 2.522A2.528 2.528 0 0115.165 24a2.527 2.527 0 01-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 01-2.52-2.523 2.526 2.526 0 012.52-2.52h6.313A2.527 2.527 0 0124 15.165a2.528 2.528 0 01-2.522 2.523h-6.313z"/></svg>
+            Slack
+          </span>
+        </div>
       </div>
     </div>
 
@@ -191,141 +218,100 @@
     </div>
   </section>
 
-  <!-- ═══ ABOUT SECTION ═══ -->
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="section__label section__label--light reveal">About</div>
-      <div class="about__layout">
-        <!-- Left: Circular Profile Photo -->
-        <div class="about__visual reveal">
-          <div class="about__photo-circle">
-            <img src="assets/profile.png" alt="Yakshith" class="about__photo-img">
-          </div>
-          <div class="about__contact-bar">
-            <a href="mailto:yakshithsarav@gmail.com" class="about__contact-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <span>yakshithsarav@gmail.com</span>
-            </a>
-            <a href="https://www.linkedin.com/in/yakshith-saravu/" target="_blank" class="about__contact-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://www.behance.net/f36yakshiths" target="_blank" class="about__contact-item">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
-              <span>Behance</span>
-            </a>
-          </div>
-        </div>
-        <!-- Right: Bio Text -->
-        <div class="about__bio reveal reveal-delay-1">
-          <h2 class="about__bio-heading">A designer who thinks<br>in systems, not screens.</h2>
-          <div class="about__text">
-            I'm a <strong>Product Designer</strong> with 2+ years of experience owning
-            <strong>end-to-end UX</strong> for B2C platforms, dashboards, and responsive 
-            web products. With <strong>15+ projects</strong> shipped, I led user research, UX architecture, and UI execution for 
-            mobile-first platforms — working closely with <strong>founders and developers</strong> 
-            to ship thoughtful, scalable design.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ═══ WORK / PROJECTS SECTION (3-column grid) ═══ -->
+
+  <!-- ═══ WORK / PROJECTS SECTION ═══ -->
   <section class="section work" id="work">
     <div class="container">
       <div class="section__label reveal">Selected Work</div>
       <h2 class="section__heading reveal reveal-delay-1">
         Projects I've shaped<br>from concept to launch.
       </h2>
+    </div>
 
-      <div class="work__grid">
+    <!-- Full-width stacked project showcase -->
+    <div class="container">
 
-        <!-- Project 1 -->
-        <div class="project-card reveal" id="project-sportbnk">
-          <div class="project-card__image">
-            <img src="assets/projects/sportbnk-thumb.png" alt="Sportbnk — Sports Sponsorship Intelligence" loading="lazy">
-          </div>
-          <div class="project-card__content">
-            <span class="project-card__number">01.</span>
-            <h3 class="project-card__title">Sportbnk — Sponsorship Intelligence</h3>
-            <div class="project-card__tags">
-              <span>Product Design</span>
-              <span>0→1 MVP</span>
-              <span>User Research</span>
-              <span>Design System</span>
-            </div>
-            <a href="sportbnk.html" class="project-card__link">
-              View Case Study
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </a>
-          </div>
+      <!-- 01 — Sportbnk -->
+      <a href="sportbnk.html" class="work__project reveal" id="project-sportbnk">
+        <div class="work__project-thumb">
+          <img src="assets/projects/sportbnk-thumb.png" alt="Sportbnk" loading="lazy">
         </div>
-
-        <!-- Project 2 -->
-        <div class="project-card reveal reveal-delay-1" id="project-globethrough">
-          <div class="project-card__image">
-            <img src="from me/Globethrough/ddd.png" alt="Globethrough — Flight Booking App" loading="lazy">
+        <div class="work__project-meta">
+          <span class="work__project-num">01</span>
+          <div class="work__project-details">
+            <h3 class="work__project-name">Sportbnk</h3>
+            <p class="work__project-desc">Sponsorship Intelligence Platform</p>
           </div>
-          <div class="project-card__content">
-            <span class="project-card__number">02.</span>
-            <h3 class="project-card__title">Globethrough — Flight Booking</h3>
-            <div class="project-card__tags">
-              <span>User Research</span>
-              <span>Booking Flow</span>
-              <span>Usability Testing</span>
-              <span>Component Library</span>
-            </div>
-            <a href="globethrough.html" class="project-card__link">
-              View Case Study
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </a>
+          <div class="work__project-tags">
+            <span>Product Design</span>
+            <span>0→1 MVP</span>
+            <span>Design System</span>
           </div>
+          <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </div>
+      </a>
 
-        <!-- Project 3 -->
-        <div class="project-card reveal reveal-delay-2" id="project-novastyles">
-          <div class="project-card__image">
-            <img src="novastyles/Frame 399.png" alt="NovaStyles — Interior Design Platform" loading="lazy">
-          </div>
-          <div class="project-card__content">
-            <span class="project-card__number">03.</span>
-            <h3 class="project-card__title">NovaStyles — Interior Design Platform</h3>
-            <div class="project-card__tags">
-              <span>Product Design</span>
-              <span>Competitor Research</span>
-              <span>E-commerce</span>
-              <span>Design System</span>
-            </div>
-            <a href="novastyles.html" class="project-card__link">
-              View Case Study
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </a>
-          </div>
+      <!-- 02 — WyshKit -->
+      <a href="wyshkit.html" class="work__project reveal" id="project-wyshkit">
+        <div class="work__project-thumb">
+          <img src="assets/Wyshkit/Frame 564.png" alt="WyshKit" loading="lazy">
         </div>
-
-        <!-- Project 4 -->
-        <div class="project-card reveal reveal-delay-3" id="project-wyshkit">
-          <div class="project-card__image">
-            <img src="assets/Wyshkit/Frame 563.png" alt="WyshKit — Quick Commerce Gifting Marketplace" loading="lazy">
+        <div class="work__project-meta">
+          <span class="work__project-num">02</span>
+          <div class="work__project-details">
+            <h3 class="work__project-name">WyshKit</h3>
+            <p class="work__project-desc">Quick Commerce Gifting</p>
           </div>
-          <div class="project-card__content">
-            <span class="project-card__number">04.</span>
-            <h3 class="project-card__title">WyshKit — Quick Commerce Gifting</h3>
-            <div class="project-card__tags">
-              <span>Product Design</span>
-              <span>Order Flow</span>
-              <span>Marketplace</span>
-              <span>Mobile App</span>
-            </div>
-            <a href="wyshkit.html" class="project-card__link">
-              View Case Study
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </a>
+          <div class="work__project-tags">
+            <span>Product Design</span>
+            <span>Order Flow</span>
+            <span>Mobile App</span>
           </div>
+          <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </div>
+      </a>
 
-      </div>
+      <!-- 03 — NovaStyles -->
+      <a href="novastyles.html" class="work__project reveal" id="project-novastyles">
+        <div class="work__project-thumb">
+          <img src="novastyles/Frame 399.png" alt="NovaStyles" loading="lazy">
+        </div>
+        <div class="work__project-meta">
+          <span class="work__project-num">03</span>
+          <div class="work__project-details">
+            <h3 class="work__project-name">NovaStyles</h3>
+            <p class="work__project-desc">Interior Design Platform</p>
+          </div>
+          <div class="work__project-tags">
+            <span>Product Design</span>
+            <span>E-commerce</span>
+            <span>Design System</span>
+          </div>
+          <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
+      <!-- 04 — Globethrough -->
+      <a href="globethrough.html" class="work__project reveal" id="project-globethrough">
+        <div class="work__project-thumb">
+          <img src="from me/Globethrough/ddd.png" alt="Globethrough" loading="lazy">
+        </div>
+        <div class="work__project-meta">
+          <span class="work__project-num">04</span>
+          <div class="work__project-details">
+            <h3 class="work__project-name">Globethrough</h3>
+            <p class="work__project-desc">Flight Booking Experience</p>
+          </div>
+          <div class="work__project-tags">
+            <span>User Research</span>
+            <span>Booking Flow</span>
+            <span>Usability Testing</span>
+          </div>
+          <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
     </div>
   </section>
 
@@ -377,193 +363,38 @@
     </div>
   </section>
 
-  <!-- ═══ EXPERIENCE SECTION ═══ -->
-  <section class="section experience" id="experience">
-    <div class="container">
-      <div class="section__label section__label--light reveal">Experience</div>
-      <h2 class="section__heading reveal reveal-delay-1" style="color: #fff;">
-        Where I've made<br>an impact.
-      </h2>
-      <div class="timeline">
-        <div class="timeline__item reveal">
-          <div class="timeline__period">May 2025 — Present</div>
-          <div class="timeline__content">
-            <h3>Basecampmart (Wyshkit)</h3>
-            <h4>Product Designer</h4>
-            <p>Led end-to-end product design for a multi-sided gifting e-commerce platform.</p>
-            <ul>
-              <li>Owned UX and UI design across the entire Wyshkit ecosystem</li>
-              <li>Contributed to early platform architecture decisions</li>
-              <li>Conducted internal UX reviews and operational walkthroughs</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline__item reveal">
-          <div class="timeline__period">Apr 2024 — May 2025</div>
-          <div class="timeline__content">
-            <h3>WebSort (Globethrough)</h3>
-            <h4>Product Designer</h4>
-            <p>Led 10+ product designs across apps, dashboards, and websites.</p>
-            <ul>
-              <li>Led UX from discovery to final UI across the full product ecosystem</li>
-              <li>Designed a 4-step booking flow, achieving 85% task success rate</li>
-              <li>Built reusable UI components to maintain cross-platform consistency</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline__item reveal">
-          <div class="timeline__period">Aug 2023 — Sep 2023</div>
-          <div class="timeline__content">
-            <h3>Zephyr Technologies</h3>
-            <h4>UI Designer & Front-End Developer Intern</h4>
-            <p>Worked on dashboards and data-heavy interfaces for sustainability products.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ═══ SKILLS SECTION ═══ -->
-  <section class="section skills-v2" id="skills">
-    <div class="container">
-      <div class="section__label reveal">Core Skills</div>
-      <h2 class="section__heading reveal reveal-delay-1">
-        What I bring to<br>every project.
-      </h2>
-      <div class="skills-bento">
-        <!-- Large featured card -->
-        <div class="skills-bento__card skills-bento__card--featured reveal">
-          <div class="skills-bento__card-accent"></div>
-          <span class="skills-bento__card-number">01</span>
-          <h3 class="skills-bento__card-title">Product & UX</h3>
-          <p class="skills-bento__card-desc">End-to-end product thinking — from problem framing to polished interfaces.</p>
-          <div class="skills-bento__tags">
-            <span>Problem Framing</span>
-            <span>UX Strategy</span>
-            <span>User Flows</span>
-            <span>Information Architecture</span>
-            <span>Usability Testing</span>
-            <span>Design Systems</span>
-            <span>Component Libraries</span>
-            <span>Mobile-First Design</span>
-            <span>Responsive Design</span>
-          </div>
-        </div>
-        <!-- Interface & Visual -->
-        <div class="skills-bento__card skills-bento__card--visual reveal reveal-delay-1">
-          <div class="skills-bento__card-accent"></div>
-          <span class="skills-bento__card-number">02</span>
-          <h3 class="skills-bento__card-title">Interface &<br>Visual Design</h3>
-          <div class="skills-bento__tags">
-            <span>UI Systems</span>
-            <span>Typography & Layout</span>
-            <span>SaaS Interfaces</span>
-            <span>B2C Products</span>
-            <span>Visual Hierarchy</span>
-            <span>Consistency</span>
-          </div>
-        </div>
-        <!-- Collaboration -->
-        <div class="skills-bento__card skills-bento__card--collab reveal reveal-delay-2">
-          <div class="skills-bento__card-accent"></div>
-          <span class="skills-bento__card-number">03</span>
-          <h3 class="skills-bento__card-title">Collaboration</h3>
-          <div class="skills-bento__tags">
-            <span>Cross-functional Teams</span>
-            <span>Stakeholder Mgmt</span>
-            <span>Jira Workflows</span>
-            <span>Design Handoff</span>
-            <span>Documentation</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ EDUCATION SECTION ═══ -->
-  <section class="section education-v2" id="education">
-    <div class="container">
-      <div class="education-v2__header reveal">
-        <div class="section__label">Education & Certifications</div>
-      </div>
-      <div class="education-v2__cards">
-        <!-- Degree -->
-        <div class="education-v2__card reveal">
-          <div class="education-v2__card-line"></div>
-          <div class="education-v2__card-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
-          </div>
-          <div class="education-v2__card-content">
-            <span class="education-v2__card-type">Degree</span>
-            <h3 class="education-v2__card-title">SDM Institute of Technology</h3>
-            <p class="education-v2__card-subtitle">Bachelor of Computer Science and Engineering</p>
-            <div class="education-v2__card-tags">
-              <span>Web Development</span>
-              <span>Fullstack Development</span>
-              <span>AI & Machine Learning</span>
-            </div>
-          </div>
-        </div>
-        <!-- Certification -->
-        <div class="education-v2__card reveal reveal-delay-1">
-          <div class="education-v2__card-line"></div>
-          <div class="education-v2__card-badge education-v2__card-badge--cert">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-2 5l9-11h-5l2-5L7 15z"/></svg>
-          </div>
-          <div class="education-v2__card-content">
-            <span class="education-v2__card-type">Certification</span>
-            <h3 class="education-v2__card-title">Google UX Design Professional Certificate</h3>
-            <div class="education-v2__card-tags">
-              <span>User Research</span>
-              <span>UI/UX Research</span>
-              <span>Persona Development</span>
-              <span>Responsive Web Design</span>
-              <span>Cross Platform</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ═══ CONTACT SECTION ═══ -->
   <section class="section contact" id="contact">
     <div class="container">
-      <div class="section__label section__label--light reveal">Get In Touch</div>
-      <h2 class="contact__heading reveal reveal-delay-1">
-        Let's work<br><span>together.</span>
-      </h2>
-      <div class="contact__grid">
-        <div class="contact__info reveal reveal-delay-2">
-          <div class="contact__info-item">
-            <span class="contact__info-label">Email</span>
-            <a href="mailto:yakshithsarav@gmail.com" class="contact__info-value">yakshithsarav@gmail.com</a>
-          </div>
-          <div class="contact__info-item">
-            <span class="contact__info-label">Phone</span>
-            <a href="tel:+917975218181" class="contact__info-value">+91 7975218181</a>
-          </div>
-          <div class="contact__info-item">
-            <span class="contact__info-label">Location</span>
-            <span class="contact__info-value">Bengaluru, India</span>
-          </div>
-        </div>
-        <div class="contact__cta reveal reveal-delay-3">
-          <a href="mailto:yakshithsarav@gmail.com" class="contact__cta-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Send me an email
+      <div class="contact__center reveal">
+        <p class="contact__label">Want to work together?</p>
+        <h2 class="contact__heading">Let's connect.</h2>
+        <p class="contact__sub">I'm always open to discussing new projects, design challenges, or collaboration opportunities.</p>
+        <div class="contact__links">
+          <a href="mailto:yakshithsarav@gmail.com" class="contact__link contact__link--primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            yakshithsarav@gmail.com
           </a>
-          <div class="contact__social">
-            <a href="https://www.linkedin.com/in/yakshith-saravu/" target="_blank" class="contact__social-link" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="https://www.behance.net/f36yakshiths" target="_blank" class="contact__social-link" aria-label="Behance">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
-            </a>
-            <a href="https://dribbble.com/yakshith" target="_blank" class="contact__social-link" aria-label="Dribbble">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.375 0 0 5.375 0 12s5.375 12 12 12 12-5.375 12-12S18.625 0 12 0zm7.938 5.625a10.167 10.167 0 012.187 6.313c-.319-.063-3.506-.713-6.719-.306-.069-.156-.131-.319-.2-.481-.188-.438-.394-.875-.613-1.3 3.581-1.462 5.206-3.563 5.344-3.75zM12 1.875c2.625 0 5.025 1.012 6.819 2.662-.113.163-1.588 2.138-5.044 3.425A92.555 92.555 0 0010.2 2.025 10.225 10.225 0 0112 1.875z"/></svg>
-            </a>
-          </div>
+          <a href="tel:+917975218181" class="contact__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +91 7975218181
+          </a>
+        </div>
+        <div class="contact__social">
+          <a href="https://www.linkedin.com/in/yakshith-saravu/" target="_blank" class="contact__social-btn" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.behance.net/f36yakshiths" target="_blank" class="contact__social-btn" aria-label="Behance">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
+            Behance
+          </a>
+          <a href="https://wa.me/917975218181" target="_blank" class="contact__social-btn" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
         </div>
       </div>
     </div>
