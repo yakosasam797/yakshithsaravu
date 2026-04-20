@@ -381,19 +381,9 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   color: var(--text-primary);
   display: block;
   text-align: center;
+  white-space: nowrap;
   opacity:0; transform:translateY(60px);
   animation: fadeInUp 1s var(--ease-out-expo) .5s forwards;
-}
-
-.hero__title-line2 {
-  font-size: clamp(52px, 9vw, 140px);
-  color: transparent;
-  -webkit-text-stroke: 2px var(--text-primary);
-  display: block;
-  text-align: center;
-  margin-top: 0;
-  opacity:0; transform:translateY(60px);
-  animation: fadeInUp 1s var(--ease-out-expo) .7s forwards;
 }
 
 .hero__tagline {
@@ -544,7 +534,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   font-size:13px; font-weight:500;
   text-transform:uppercase; letter-spacing:3px;
   color: var(--text-muted);
-  margin-bottom:60px;
+  margin-bottom:20px;
   display:flex; align-items:center; gap:16px;
 }
 .section__label::before {
@@ -558,7 +548,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   font-family: var(--font-display);
   font-size: clamp(36px, 5vw, 72px);
   font-weight:700; letter-spacing:-.03em;
-  line-height:1.1; margin-bottom:48px;
+  line-height:1.1; margin-bottom:32px;
 }
 
 /* ══════════════════════════════════════
@@ -1370,9 +1360,6 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   .education-v2__cards { grid-template-columns:1fr; }
 
   .hero__title-line1 {
-    font-size: clamp(56px, 10vw, 120px);
-  }
-  .hero__title-line2 {
     font-size: clamp(44px, 8vw, 100px);
   }
 
@@ -1395,11 +1382,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   .hero__content { padding-bottom: 32px; }
 
   .hero__title-line1 {
-    font-size: clamp(48px, 14vw, 80px);
-  }
-  .hero__title-line2 {
     font-size: clamp(36px, 10vw, 64px);
-    -webkit-text-stroke-width: 1.2px;
   }
   .hero__cta-primary { padding: 12px 24px; font-size: 14px; }
   .hero__cta-whatsapp { width: 44px; height: 44px; }
@@ -1468,9 +1451,6 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   .project-card__content { padding: 20px 20px 24px; }
 
   .hero__title-line1 {
-    font-size: clamp(40px, 16vw, 60px);
-  }
-  .hero__title-line2 {
     font-size: clamp(30px, 11vw, 48px);
   }
 }
@@ -3261,8 +3241,8 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
    NEW ELEMENTS — RESPONSIVE TABLET
    ══════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .hero__title {
-    font-size: clamp(48px, 10vw, 100px) !important;
+  .hero__title-line1 {
+    font-size: clamp(44px, 7vw, 90px);
   }
   .work__card {
     width: clamp(300px, 40vw, 380px);
@@ -3293,11 +3273,8 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
     align-items: center;
   }
   .hero__title-line1 {
-    font-size: clamp(40px, 14vw, 72px) !important;
-  }
-  .hero__title-line2 {
-    font-size: clamp(32px, 11vw, 56px) !important;
-    -webkit-text-stroke-width: 1.2px;
+    font-size: clamp(28px, 8vw, 52px) !important;
+    white-space: normal;
   }
   .hero__tagline {
     font-size: clamp(13px, 3.5vw, 16px) !important;
@@ -3364,10 +3341,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
     height: 56px;
   }
   .hero__title-line1 {
-    font-size: clamp(36px, 16vw, 56px) !important;
-  }
-  .hero__title-line2 {
-    font-size: clamp(28px, 12vw, 44px) !important;
+    font-size: clamp(24px, 10vw, 40px) !important;
   }
   .hero__skill-pill {
     font-size: 11px;
@@ -3437,86 +3411,126 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 }
 
 /* ══════════════════════════════════════
-   LOGO DESIGN — SECTION
+   LOGO DESIGN — COMPACT EXPANDABLE CARDS
    ══════════════════════════════════════ */
 .logo-design {
   background: var(--bg-primary);
 }
 
-.logo-project {
-  margin-bottom: 48px;
-}
-.logo-project:last-child {
-  margin-bottom: 0;
+.logo-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-/* Header: Info + Hero Mark */
-.logo-project__header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  margin-bottom: 32px;
-  padding: 48px;
+.logo-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: box-shadow var(--transition-fast);
+}
+.logo-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,.06);
 }
 
-.logo-project__name {
+.logo-card__header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  user-select: none;
+}
+.logo-card__header:hover {
+  background: rgba(0,0,0,.02);
+}
+
+.logo-card__mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 8px;
+}
+.logo-card__mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.logo-card__name {
   font-family: var(--font-display);
-  font-size: clamp(24px, 2.5vw, 36px);
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: -.03em;
-  line-height: 1.15;
+  letter-spacing: -.02em;
   color: var(--text-primary);
-  margin-bottom: 12px;
+  margin-bottom: 2px;
 }
 
-.logo-project__desc {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.65;
+.logo-card__desc {
+  font-size: 14px;
+  font-weight: 400;
   color: var(--text-secondary);
-  margin-bottom: 20px;
-  max-width: 480px;
+  margin-bottom: 6px;
 }
 
-.logo-project__tags {
+.logo-card__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
 }
-.logo-project__tags span {
-  font-size: 12px;
+.logo-card__tags span {
+  font-size: 11px;
   font-weight: 500;
-  padding: 5px 14px;
+  padding: 3px 10px;
   border-radius: 100px;
   background: rgba(10,10,10,.06);
   color: var(--text-secondary);
 }
 
-.logo-project__hero-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
+.logo-card__chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: transform .3s var(--ease-out-expo);
 }
-.logo-project__hero-mark img {
-  max-width: 100%;
-  max-height: 280px;
-  object-fit: contain;
+.logo-card--open .logo-card__chevron {
+  transform: rotate(180deg);
 }
 
-/* Variants Grid */
+/* Expandable Body */
+.logo-card__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s var(--ease-out-expo), padding .5s var(--ease-out-expo);
+  padding: 0 24px;
+}
+.logo-card--open .logo-card__body {
+  max-height: 800px;
+  padding: 0 24px 24px;
+}
+
+/* Variants Grid (shared) */
 .logo-project__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 12px;
 }
 
 .logo-project__cell {
-  border-radius: 14px;
+  border-radius: 10px;
   overflow: hidden;
   background: #F5F5F5;
   aspect-ratio: 1 / 1;
@@ -3524,11 +3538,11 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border-color);
-  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 .logo-project__cell:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(0,0,0,.08);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.06);
 }
 .logo-project__cell--dark {
   background: #F8F8F8;
@@ -3540,38 +3554,48 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   padding: 0;
 }
 
-/* Logo Design Responsive */
+/* Logo Cards Responsive */
 @media (max-width: 768px) {
-  .logo-project__header {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 28px 24px;
-    border-radius: 14px;
+  .logo-card__header {
+    gap: 14px;
+    padding: 16px 18px;
   }
-  .logo-project__hero-mark {
-    padding: 16px;
-    order: -1;
+  .logo-card__mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    padding: 6px;
   }
-  .logo-project__hero-mark img {
-    max-height: 180px;
+  .logo-card__name {
+    font-size: 16px;
+  }
+  .logo-card__desc {
+    font-size: 13px;
+  }
+  .logo-card__body {
+    padding: 0 18px;
+  }
+  .logo-card--open .logo-card__body {
+    padding: 0 18px 18px;
   }
   .logo-project__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
   }
   .logo-project__cell {
-    border-radius: 10px;
+    border-radius: 8px;
   }
 }
 @media (max-width: 480px) {
-  .logo-project__header {
-    padding: 20px 18px;
+  .logo-card__header {
+    padding: 14px 16px;
   }
-  .logo-project__name {
-    font-size: 22px;
+  .logo-card__name {
+    font-size: 15px;
   }
-  .logo-project__desc {
-    font-size: 14px;
+  .logo-card__tags span {
+    font-size: 10px;
+    padding: 2px 8px;
   }
 }
 
