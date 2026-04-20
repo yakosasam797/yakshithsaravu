@@ -377,7 +377,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 }
 
 .hero__title-line1 {
-  font-size: clamp(64px, 11vw, 170px);
+  font-size: clamp(48px, 6vw, 96px);
   color: var(--text-primary);
   display: block;
   text-align: center;
@@ -1360,7 +1360,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   .education-v2__cards { grid-template-columns:1fr; }
 
   .hero__title-line1 {
-    font-size: clamp(44px, 8vw, 100px);
+    font-size: clamp(40px, 5.5vw, 80px);
   }
 
   /* WhatsApp is already icon-only at base styles */
@@ -1382,7 +1382,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   .hero__content { padding-bottom: 32px; }
 
   .hero__title-line1 {
-    font-size: clamp(36px, 10vw, 64px);
+    font-size: clamp(32px, 7vw, 56px);
   }
   .hero__cta-primary { padding: 12px 24px; font-size: 14px; }
   .hero__cta-whatsapp { width: 44px; height: 44px; }
@@ -1451,7 +1451,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   .project-card__content { padding: 20px 20px 24px; }
 
   .hero__title-line1 {
-    font-size: clamp(30px, 11vw, 48px);
+    font-size: clamp(26px, 8vw, 40px);
   }
 }
 
@@ -3047,14 +3047,14 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 18px;
   opacity: 0;
   transform: translateY(40px);
   animation: fadeInUp 1s var(--ease-out-expo) .3s forwards;
 }
 .hero__avatar {
-  width: 100px;
-  height: 100px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--accent);
@@ -3242,7 +3242,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
    ══════════════════════════════════════ */
 @media (max-width: 1024px) {
   .hero__title-line1 {
-    font-size: clamp(44px, 7vw, 90px);
+    font-size: clamp(40px, 5.5vw, 72px);
   }
   .work__card {
     width: clamp(300px, 40vw, 380px);
@@ -3265,15 +3265,15 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
     gap: 16px;
   }
   .hero__avatar {
-    width: 72px;
-    height: 72px;
+    width: 56px;
+    height: 56px;
     margin-bottom: 0;
   }
   .hero__title {
     align-items: center;
   }
   .hero__title-line1 {
-    font-size: clamp(28px, 8vw, 52px) !important;
+    font-size: clamp(28px, 7vw, 48px) !important;
     white-space: normal;
   }
   .hero__tagline {
@@ -3337,11 +3337,11 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 
 @media (max-width: 480px) {
   .hero__avatar {
-    width: 56px;
-    height: 56px;
+    width: 44px;
+    height: 44px;
   }
   .hero__title-line1 {
-    font-size: clamp(24px, 10vw, 40px) !important;
+    font-size: clamp(22px, 8vw, 36px) !important;
   }
   .hero__skill-pill {
     font-size: 11px;
@@ -3518,8 +3518,36 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   padding: 0 24px;
 }
 .logo-card--open .logo-card__body {
-  max-height: 800px;
+  max-height: 1000px;
   padding: 0 24px 24px;
+}
+
+/* Context text inside expanded card */
+.logo-card__context {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+.logo-card__context p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+.logo-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: gap var(--transition-fast);
+}
+.logo-card__cta:hover {
+  gap: 10px;
 }
 
 /* Variants Grid (shared) */
