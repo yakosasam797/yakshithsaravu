@@ -368,15 +368,12 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(56px, 10vw, 140px);
   font-weight: 700;
   line-height: 0.9;
   letter-spacing: -0.04em;
-  text-align: center;
   color: var(--text-primary);
-  opacity: 0;
-  transform: translateY(60px);
-  animation: fadeInUp 1s var(--ease-out-expo) .5s forwards;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero__title-line1 {
@@ -3070,7 +3067,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
   opacity: 0;
   transform: translateY(40px);
   animation: fadeInUp 1s var(--ease-out-expo) .3s forwards;
@@ -3089,6 +3086,15 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   height: 100%;
   object-fit: cover;
   object-position: center top;
+}
+
+/* ══════════════════════════════════════
+   WORK — 2-COLUMN PROJECT GRID
+   ══════════════════════════════════════ */
+.work__projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 /* ══════════════════════════════════════
@@ -3261,19 +3267,37 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   .work__card {
     width: clamp(300px, 40vw, 380px);
   }
+  .work__projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .work__project-thumb {
+    aspect-ratio: 16 / 10;
+  }
 }
 
 /* ══════════════════════════════════════
    NEW ELEMENTS — RESPONSIVE MOBILE
    ══════════════════════════════════════ */
 @media (max-width: 768px) {
+  .hero__headline {
+    flex-direction: column;
+    gap: 16px;
+  }
   .hero__avatar {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 28px;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 0;
   }
   .hero__title {
+    align-items: center;
+  }
+  .hero__title-line1 {
     font-size: clamp(40px, 14vw, 72px) !important;
+  }
+  .hero__title-line2 {
+    font-size: clamp(32px, 11vw, 56px) !important;
+    -webkit-text-stroke-width: 1.2px;
   }
   .hero__tagline {
     font-size: clamp(13px, 3.5vw, 16px) !important;
@@ -3305,6 +3329,33 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   .work__card-info {
     padding: 20px 20px 24px;
   }
+  .work__projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .work__project {
+    border-radius: 14px;
+    margin-bottom: 0;
+  }
+  .work__project-thumb {
+    aspect-ratio: 16 / 10;
+  }
+  .work__project-meta {
+    flex-wrap: wrap;
+    padding: 16px 18px;
+    gap: 10px;
+  }
+  .work__project-tags {
+    width: 100%;
+    order: 4;
+  }
+  .work__project-arrow {
+    margin-left: auto;
+  }
+  .hero__cta-resume {
+    font-size: 13px;
+    padding: 12px 22px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3312,8 +3363,11 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
     width: 56px;
     height: 56px;
   }
-  .hero__title {
+  .hero__title-line1 {
     font-size: clamp(36px, 16vw, 56px) !important;
+  }
+  .hero__title-line2 {
+    font-size: clamp(28px, 12vw, 44px) !important;
   }
   .hero__skill-pill {
     font-size: 11px;
@@ -3321,6 +3375,17 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   }
   .work__card {
     width: clamp(260px, 80vw, 320px);
+  }
+  .work__project-meta {
+    padding: 14px 16px;
+    gap: 8px;
+  }
+  .work__project-name {
+    font-size: 16px;
+  }
+  .work__project-tags span {
+    font-size: 11px;
+    padding: 4px 10px;
   }
 }
 
@@ -3372,15 +3437,154 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 }
 
 /* ══════════════════════════════════════
+   LOGO DESIGN — SECTION
+   ══════════════════════════════════════ */
+.logo-design {
+  background: var(--bg-primary);
+}
+
+.logo-project {
+  margin-bottom: 48px;
+}
+.logo-project:last-child {
+  margin-bottom: 0;
+}
+
+/* Header: Info + Hero Mark */
+.logo-project__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 48px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+}
+
+.logo-project__name {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.5vw, 36px);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.logo-project__desc {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  max-width: 480px;
+}
+
+.logo-project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.logo-project__tags span {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 100px;
+  background: rgba(10,10,10,.06);
+  color: var(--text-secondary);
+}
+
+.logo-project__hero-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+.logo-project__hero-mark img {
+  max-width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+}
+
+/* Variants Grid */
+.logo-project__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.logo-project__cell {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #F5F5F5;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+.logo-project__cell:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,.08);
+}
+.logo-project__cell--dark {
+  background: #F8F8F8;
+}
+.logo-project__cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0;
+}
+
+/* Logo Design Responsive */
+@media (max-width: 768px) {
+  .logo-project__header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 24px;
+    border-radius: 14px;
+  }
+  .logo-project__hero-mark {
+    padding: 16px;
+    order: -1;
+  }
+  .logo-project__hero-mark img {
+    max-height: 180px;
+  }
+  .logo-project__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .logo-project__cell {
+    border-radius: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .logo-project__header {
+    padding: 20px 18px;
+  }
+  .logo-project__name {
+    font-size: 22px;
+  }
+  .logo-project__desc {
+    font-size: 14px;
+  }
+}
+
+/* ══════════════════════════════════════
    WORK — FULL-WIDTH STACKED PROJECTS
    ══════════════════════════════════════ */
 .work__project {
   display: block;
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  margin-bottom: 28px;
+  margin-bottom: 0;
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
   cursor: pointer;
 }
@@ -3394,7 +3598,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 }
 .work__project-thumb {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background: #E8E8E8;
 }
@@ -3410,8 +3614,8 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 .work__project-meta {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 24px 32px;
+  gap: 16px;
+  padding: 18px 20px;
   border-top: 1px solid var(--border-color);
 }
 .work__project-num {
@@ -3474,15 +3678,14 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 @media (max-width: 768px) {
   .work__project {
     border-radius: 14px;
-    margin-bottom: 20px;
   }
   .work__project-thumb {
     aspect-ratio: 16 / 10;
   }
   .work__project-meta {
     flex-wrap: wrap;
-    padding: 18px 20px;
-    gap: 12px;
+    padding: 16px 18px;
+    gap: 10px;
   }
   .work__project-tags {
     width: 100%;

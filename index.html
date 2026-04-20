@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -95,9 +95,11 @@
         <div class="nav__sec-spacer"></div>
         <div class="nav__sec-links">
           <a href="#work" class="nav__sec-link">Work</a>
-          <span class="nav__sec-dot">·</span>
+          <span class="nav__sec-dot">&middot;</span>
+          <a href="#logos" class="nav__sec-link">Logo Design</a>
+          <span class="nav__sec-dot">&middot;</span>
           <a href="#tools" class="nav__sec-link">Tools</a>
-          <span class="nav__sec-dot">·</span>
+          <span class="nav__sec-dot">&middot;</span>
           <a href="#contact" class="nav__sec-link">Contact</a>
         </div>
       </div>
@@ -124,7 +126,10 @@
           <div class="hero__avatar">
             <img src="assets/profile.png" alt="Yakshith" class="hero__avatar-img">
           </div>
-          <h1 class="hero__title">Product Designer</h1>
+          <h1 class="hero__title">
+            <span class="hero__title-line1">Product</span>
+            <span class="hero__title-line2">Designer</span>
+          </h1>
         </div>
         <!-- 2. Paragraph -->
         <p class="hero__tagline">Helping teams design clarity in <strong>complex systems</strong>, blending <strong>research, empathy</strong> and <strong>scalable thinking</strong>.</p>
@@ -162,6 +167,22 @@
           <span class="hero__skill-pill">
             <svg class="hero__skill-svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#E01E5A" d="M5.042 15.165a2.528 2.528 0 01-2.52 2.523A2.528 2.528 0 010 15.165a2.527 2.527 0 012.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 012.521-2.52 2.527 2.527 0 012.521 2.52v6.313A2.528 2.528 0 018.834 24a2.528 2.528 0 01-2.521-2.522v-6.313z"/><path fill="#36C5F0" d="M8.834 5.042a2.528 2.528 0 01-2.521-2.52A2.528 2.528 0 018.834 0a2.528 2.528 0 012.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 012.521 2.521 2.528 2.528 0 01-2.521 2.521H2.522A2.528 2.528 0 010 8.834a2.528 2.528 0 012.522-2.521h6.312z"/><path fill="#2EB67D" d="M18.956 8.834a2.528 2.528 0 012.522-2.521A2.528 2.528 0 0124 8.834a2.528 2.528 0 01-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 01-2.523 2.521 2.527 2.527 0 01-2.52-2.521V2.522A2.527 2.527 0 0115.165 0a2.528 2.528 0 012.523 2.522v6.312z"/><path fill="#ECB22E" d="M15.165 18.956a2.528 2.528 0 012.523 2.522A2.528 2.528 0 0115.165 24a2.527 2.527 0 01-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 01-2.52-2.523 2.526 2.526 0 012.52-2.52h6.313A2.527 2.527 0 0124 15.165a2.528 2.528 0 01-2.522 2.523h-6.313z"/></svg>
             Slack
+          </span>
+          <span class="hero__skill-pill">
+            <span class="hero__skill-badge" style="background:#D97757;"><span style="color:#fff;font-weight:700;font-size:11px;">C</span></span>
+            Claude
+          </span>
+          <span class="hero__skill-pill">
+            <span class="hero__skill-badge" style="background:#10A37F;"><span style="color:#fff;font-weight:700;font-size:11px;">G</span></span>
+            ChatGPT
+          </span>
+          <span class="hero__skill-pill">
+            <span class="hero__skill-badge" style="background:#7C3AED;"><span style="color:#fff;font-weight:700;font-size:11px;">L</span></span>
+            Lovart.ai
+          </span>
+          <span class="hero__skill-pill">
+            <span class="hero__skill-badge" style="background:#4285F4;"><span style="color:#fff;font-weight:700;font-size:11px;">AG</span></span>
+            Antigravity
           </span>
         </div>
       </div>
@@ -231,89 +252,144 @@
 
     <!-- Full-width stacked project showcase -->
     <div class="container">
+      <div class="work__projects-grid">
 
-      <!-- 01 — Sportbnk -->
-      <a href="sportbnk.html" class="work__project reveal" id="project-sportbnk">
-        <div class="work__project-thumb">
-          <img src="assets/projects/sportbnk-thumb.png" alt="Sportbnk" loading="lazy">
-        </div>
-        <div class="work__project-meta">
-          <span class="work__project-num">01</span>
-          <div class="work__project-details">
-            <h3 class="work__project-name">Sportbnk</h3>
-            <p class="work__project-desc">Sponsorship Intelligence Platform</p>
+        <!-- 01 — Sportbnk -->
+        <a href="sportbnk.html" class="work__project reveal" id="project-sportbnk">
+          <div class="work__project-thumb">
+            <img src="assets/projects/sportbnk-thumb.png" alt="Sportbnk" loading="lazy">
           </div>
-          <div class="work__project-tags">
-            <span>Product Design</span>
-            <span>0→1 MVP</span>
-            <span>Design System</span>
+          <div class="work__project-meta">
+            <span class="work__project-num">01</span>
+            <div class="work__project-details">
+              <h3 class="work__project-name">Sportbnk</h3>
+              <p class="work__project-desc">Sponsorship Intelligence Platform</p>
+            </div>
+            <div class="work__project-tags">
+              <span>Product Design</span>
+              <span>0→1 MVP</span>
+              <span>Design System</span>
+            </div>
+            <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
           </div>
-          <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </div>
-      </a>
+        </a>
 
-      <!-- 02 — WyshKit -->
-      <a href="wyshkit.html" class="work__project reveal" id="project-wyshkit">
-        <div class="work__project-thumb">
-          <img src="assets/Wyshkit/Frame 564.png" alt="WyshKit" loading="lazy">
-        </div>
-        <div class="work__project-meta">
-          <span class="work__project-num">02</span>
-          <div class="work__project-details">
-            <h3 class="work__project-name">WyshKit</h3>
-            <p class="work__project-desc">Quick Commerce Gifting</p>
+        <!-- 02 — WyshKit -->
+        <a href="wyshkit.html" class="work__project reveal" id="project-wyshkit">
+          <div class="work__project-thumb">
+            <img src="assets/Wyshkit/Frame 564.png" alt="WyshKit" loading="lazy">
           </div>
-          <div class="work__project-tags">
-            <span>Product Design</span>
-            <span>Order Flow</span>
-            <span>Mobile App</span>
+          <div class="work__project-meta">
+            <span class="work__project-num">02</span>
+            <div class="work__project-details">
+              <h3 class="work__project-name">WyshKit</h3>
+              <p class="work__project-desc">Quick Commerce Gifting</p>
+            </div>
+            <div class="work__project-tags">
+              <span>Product Design</span>
+              <span>Order Flow</span>
+              <span>Mobile App</span>
+            </div>
+            <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
           </div>
-          <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </div>
-      </a>
+        </a>
 
-      <!-- 03 — NovaStyles -->
-      <a href="novastyles.html" class="work__project reveal" id="project-novastyles">
-        <div class="work__project-thumb">
-          <img src="novastyles/Frame 399.png" alt="NovaStyles" loading="lazy">
-        </div>
-        <div class="work__project-meta">
-          <span class="work__project-num">03</span>
-          <div class="work__project-details">
-            <h3 class="work__project-name">NovaStyles</h3>
-            <p class="work__project-desc">Interior Design Platform</p>
+        <!-- 03 — NovaStyles -->
+        <a href="novastyles.html" class="work__project reveal" id="project-novastyles">
+          <div class="work__project-thumb">
+            <img src="novastyles/Frame 399.png" alt="NovaStyles" loading="lazy">
           </div>
-          <div class="work__project-tags">
-            <span>Product Design</span>
-            <span>E-commerce</span>
-            <span>Design System</span>
+          <div class="work__project-meta">
+            <span class="work__project-num">03</span>
+            <div class="work__project-details">
+              <h3 class="work__project-name">NovaStyles</h3>
+              <p class="work__project-desc">Interior Design Platform</p>
+            </div>
+            <div class="work__project-tags">
+              <span>Product Design</span>
+              <span>E-commerce</span>
+              <span>Design System</span>
+            </div>
+            <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
           </div>
-          <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </div>
-      </a>
+        </a>
 
-      <!-- 04 — Globethrough -->
-      <a href="globethrough.html" class="work__project reveal" id="project-globethrough">
-        <div class="work__project-thumb">
-          <img src="from me/Globethrough/ddd.png" alt="Globethrough" loading="lazy">
-        </div>
-        <div class="work__project-meta">
-          <span class="work__project-num">04</span>
-          <div class="work__project-details">
-            <h3 class="work__project-name">Globethrough</h3>
-            <p class="work__project-desc">Flight Booking Experience</p>
+        <!-- 04 — Globethrough -->
+        <a href="globethrough.html" class="work__project reveal" id="project-globethrough">
+          <div class="work__project-thumb">
+            <img src="from me/Globethrough/ddd.png" alt="Globethrough" loading="lazy">
           </div>
-          <div class="work__project-tags">
-            <span>User Research</span>
-            <span>Booking Flow</span>
-            <span>Usability Testing</span>
+          <div class="work__project-meta">
+            <span class="work__project-num">04</span>
+            <div class="work__project-details">
+              <h3 class="work__project-name">Globethrough</h3>
+              <p class="work__project-desc">Flight Booking Experience</p>
+            </div>
+            <div class="work__project-tags">
+              <span>User Research</span>
+              <span>Booking Flow</span>
+              <span>Usability Testing</span>
+            </div>
+            <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
           </div>
-          <svg class="work__project-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </div>
-      </a>
+        </a>
 
+      </div>
     </div>
   </section>
+
+
+  <!-- ═══ LOGO DESIGN SECTION ═══ -->
+  <section class="section logo-design" id="logos">
+    <div class="container">
+      <div class="section__label reveal">Logo Design</div>
+      <h2 class="section__heading reveal reveal-delay-1">
+        Brand identities I've<br>crafted from scratch.
+      </h2>
+    </div>
+
+    <div class="container">
+      <!-- Project: The Event Studio by Sush -->
+      <div class="logo-project reveal">
+        <div class="logo-project__header">
+          <div class="logo-project__info">
+            <h3 class="logo-project__name">The Event Studio by Sush</h3>
+            <p class="logo-project__desc">Brand identity for a boutique event planning studio. The mark uses three interlocking petals forming a puzzle motif — symbolizing how seamless, creative, and memorable events come together.</p>
+            <div class="logo-project__tags">
+              <span>Brand Identity</span>
+              <span>Logo Design</span>
+              <span>Visual System</span>
+            </div>
+          </div>
+          <div class="logo-project__hero-mark">
+            <img src="assets/theeventstudionlogo/The Event Studio by Sush Logo files/PNG/1x/Artboard 3-8.png" alt="The Event Studio by Sush — Primary Logo" loading="lazy">
+          </div>
+        </div>
+
+        <div class="logo-project__grid">
+          <div class="logo-project__cell">
+            <img src="assets/theeventstudionlogo/The Event Studio by Sush Logo files/JPG/1x/Artboard 3 copy-100.jpg" alt="Horizontal lockup" loading="lazy">
+          </div>
+          <div class="logo-project__cell">
+            <img src="assets/theeventstudionlogo/The Event Studio by Sush Logo files/JPG/1x/Artboard 3 copy 2-100.jpg" alt="Vertical lockup with icon" loading="lazy">
+          </div>
+          <div class="logo-project__cell">
+            <img src="assets/theeventstudionlogo/The Event Studio by Sush Logo files/JPG/1x/Artboard 3 copy 6-100.jpg" alt="Circular badge" loading="lazy">
+          </div>
+          <div class="logo-project__cell logo-project__cell--dark">
+            <img src="assets/theeventstudionlogo/The Event Studio by Sush Logo files/JPG/1x/Artboard 3 copy 8-100.jpg" alt="Monochrome dark" loading="lazy">
+          </div>
+          <div class="logo-project__cell logo-project__cell--dark">
+            <img src="assets/theeventstudionlogo/The Event Studio by Sush Logo files/JPG/1x/Artboard 3 copy 9-100.jpg" alt="Monochrome horizontal" loading="lazy">
+          </div>
+          <div class="logo-project__cell logo-project__cell--dark">
+            <img src="assets/theeventstudionlogo/The Event Studio by Sush Logo files/JPG/1x/Artboard 3 copy 10-100.jpg" alt="Monochrome vertical" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- ═══ TOOLS / SOFTWARE SECTION ═══ -->
   <section class="section tools-section" id="tools">
@@ -357,6 +433,34 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M5.042 15.165a2.528 2.528 0 01-2.52 2.523A2.528 2.528 0 010 15.165a2.527 2.527 0 012.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 012.521-2.52 2.527 2.527 0 012.521 2.52v6.313A2.528 2.528 0 018.834 24a2.528 2.528 0 01-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 01-2.521-2.52A2.528 2.528 0 018.834 0a2.528 2.528 0 012.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 012.521 2.521 2.528 2.528 0 01-2.521 2.521H2.522A2.528 2.528 0 010 8.834a2.528 2.528 0 012.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 012.522-2.521A2.528 2.528 0 0124 8.834a2.528 2.528 0 01-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 01-2.523 2.521 2.527 2.527 0 01-2.52-2.521V2.522A2.527 2.527 0 0115.165 0a2.528 2.528 0 012.523 2.522v6.312zm-2.523 10.122a2.528 2.528 0 012.523 2.522A2.528 2.528 0 0115.165 24a2.527 2.527 0 01-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 01-2.52-2.523 2.526 2.526 0 012.52-2.52h6.313A2.527 2.527 0 0124 15.165a2.528 2.528 0 01-2.522 2.523h-6.313z"/></svg>
           </div>
           <span class="tool-item__name">Slack</span>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-item__badge" style="background: #D97757;">
+            <span style="color: #fff; font-weight: 700; font-size: 16px;">C</span>
+          </div>
+          <span class="tool-item__name">Claude</span>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-item__badge" style="background: #10A37F;">
+            <span style="color: #fff; font-weight: 700; font-size: 16px;">G</span>
+          </div>
+          <span class="tool-item__name">ChatGPT</span>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-item__badge" style="background: #7C3AED;">
+            <span style="color: #fff; font-weight: 700; font-size: 16px;">L</span>
+          </div>
+          <span class="tool-item__name">Lovart.ai</span>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-item__badge" style="background: #4285F4;">
+            <span style="color: #fff; font-weight: 700; font-size: 14px;">AG</span>
+          </div>
+          <span class="tool-item__name">Antigravity</span>
         </div>
 
       </div>
