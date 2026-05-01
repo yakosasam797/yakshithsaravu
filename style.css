@@ -3677,231 +3677,69 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 }
 
 /* ══════════════════════════════════════
-   GRAPHIC WORKS — EXPANDABLE CARDS
+   GRAPHIC WORKS — SIMPLE GALLERY
    ══════════════════════════════════════ */
-.graphic-works {
+.gw-section {
   background: var(--bg-primary);
 }
 
-.graphic-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.gw-tagline {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 520px;
 }
 
-.graphic-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
+.gw-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.gw-gallery__item {
+  border-radius: 12px;
   overflow: hidden;
-  transition: box-shadow var(--transition-fast);
-}
-.graphic-card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,.06);
-}
-
-.graphic-card__header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 20px 24px;
-  cursor: pointer;
-  transition: background var(--transition-fast);
-  user-select: none;
-}
-.graphic-card__header:hover {
-  background: rgba(0,0,0,.02);
-}
-
-/* Thumbnail preview in collapsed state */
-.graphic-card__thumb {
-  width: 80px;
-  height: 56px;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #f0f0f0;
   border: 1px solid var(--border-color);
-  flex-shrink: 0;
+  background: #f5f5f5;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
-.graphic-card__thumb--dark {
-  background: #001466;
+.gw-gallery__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.08);
 }
-.graphic-card__thumb img {
+
+.gw-gallery__item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.graphic-card__info {
-  flex: 1;
-  min-width: 0;
-}
-
-.graphic-card__name {
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -.02em;
-  color: var(--text-primary);
-  margin-bottom: 2px;
-}
-
-.graphic-card__desc {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text-secondary);
-  margin-bottom: 6px;
-}
-
-.graphic-card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-.graphic-card__tags span {
-  font-size: 11px;
-  font-weight: 500;
-  padding: 3px 10px;
-  border-radius: 100px;
-  background: rgba(10,10,10,.06);
-  color: var(--text-secondary);
-}
-
-.graphic-card__chevron {
-  flex-shrink: 0;
-  color: var(--text-muted);
-  transition: transform .3s var(--ease-out-expo);
-}
-.graphic-card--open .graphic-card__chevron {
-  transform: rotate(180deg);
-}
-
-/* Expandable body */
-.graphic-card__body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .5s var(--ease-out-expo), padding .5s var(--ease-out-expo);
-  padding: 0 24px;
-}
-.graphic-card--open .graphic-card__body {
-  max-height: 4000px;
-  padding: 0 24px 24px;
-}
-
-/* Context blurb */
-.graphic-card__context {
-  margin-bottom: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--border-color);
-}
-.graphic-card__context p {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--text-secondary);
-}
-
-/* Landscape gallery — 1 full-width hero + 3 columns below */
-.graphic-card__gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-.graphic-card__gallery img {
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid var(--border-color);
-  object-fit: cover;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   display: block;
-}
-.graphic-card__gallery img:first-child {
-  grid-column: 1 / -1;
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
-}
-.graphic-card__gallery img:not(:first-child) {
   aspect-ratio: 16 / 10;
+  transition: transform .6s var(--ease-out-expo);
 }
-.graphic-card__gallery img:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(0,0,0,.08);
-}
-
-/* Portrait gallery — for Arovida's tall/portrait creatives */
-.graphic-card__gallery--portrait {
-  grid-template-columns: repeat(3, 1fr);
-}
-.graphic-card__gallery--portrait img:first-child {
-  grid-column: 1 / -1;
-  aspect-ratio: 9 / 14;
-  max-height: 520px;
-  margin: 0 auto;
-  width: auto;
-  max-width: 100%;
-}
-.graphic-card__gallery--portrait img:first-child {
-  grid-column: 1 / -1;
-  width: 100%;
-  max-height: 520px;
-  aspect-ratio: auto;
-  object-position: top;
-}
-.graphic-card__gallery--portrait img:not(:first-child) {
-  aspect-ratio: 9 / 16;
+.gw-gallery__item:hover img {
+  transform: scale(1.03);
 }
 
 /* Graphic Works — Responsive */
 @media (max-width: 768px) {
-  .graphic-card__header {
-    gap: 14px;
-    padding: 16px 18px;
-  }
-  .graphic-card__thumb {
-    width: 64px;
-    height: 44px;
-    border-radius: 8px;
-  }
-  .graphic-card__name {
-    font-size: 16px;
-  }
-  .graphic-card__desc {
-    font-size: 13px;
-  }
-  .graphic-card__body {
-    padding: 0 18px;
-  }
-  .graphic-card--open .graphic-card__body {
-    padding: 0 18px 18px;
-  }
-  .graphic-card__gallery {
-    grid-template-columns: 1fr;
+  .gw-gallery {
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
-  .graphic-card__gallery img:first-child {
-    aspect-ratio: 16 / 9;
-  }
-  .graphic-card__gallery img:not(:first-child) {
-    aspect-ratio: 4 / 3;
-  }
-  .graphic-card__gallery--portrait img:first-child {
-    aspect-ratio: 4 / 5;
-    max-height: 360px;
-  }
-  .graphic-card__gallery--portrait img:not(:first-child) {
-    aspect-ratio: 4 / 5;
+  .gw-tagline {
+    font-size: 14px;
+    margin-bottom: 24px;
   }
 }
 @media (max-width: 480px) {
-  .graphic-card__header {
-    padding: 14px 16px;
+  .gw-gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
-  .graphic-card__name {
-    font-size: 15px;
-  }
-  .graphic-card__tags span {
-    font-size: 10px;
-    padding: 2px 8px;
+  .gw-gallery__item img {
+    aspect-ratio: 16 / 9;
   }
 }
 
